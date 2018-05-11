@@ -1,0 +1,1754 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BOPModelStoreContainer" CdmEntityContainer="BOPEntities">
+    <EntitySetMapping Name="AddressXUser">
+      <EntityTypeMapping TypeName="BOPModel.AddressXUser">
+        <MappingFragment StoreEntitySet="AddressXUser">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="None" ColumnName="None" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AllSalesMainCustomer">
+      <EntityTypeMapping TypeName="BOPModel.AllSalesMainCustomer">
+        <MappingFragment StoreEntitySet="AllSalesMainCustomer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdSale" ColumnName="IdSale" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="CustomerFirstName" ColumnName="CustomerFirstName" />
+          <ScalarProperty Name="CustomerLastName" ColumnName="CustomerLastName" />
+          <ScalarProperty Name="CustomerBirthday" ColumnName="CustomerBirthday" />
+          <ScalarProperty Name="CustomerEmail" ColumnName="CustomerEmail" />
+          <ScalarProperty Name="CustomerCellphone" ColumnName="CustomerCellphone" />
+          <ScalarProperty Name="CustomerGender" ColumnName="CustomerGender" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="StatesId" ColumnName="StatesId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="CustomerZipCode" ColumnName="CustomerZipCode" />
+          <ScalarProperty Name="CustomerStreet" ColumnName="CustomerStreet" />
+          <ScalarProperty Name="CustomerPlateNumber" ColumnName="CustomerPlateNumber" />
+          <ScalarProperty Name="CustomerComplement" ColumnName="CustomerComplement" />
+          <ScalarProperty Name="CustomerNameMother" ColumnName="CustomerNameMother" />
+          <ScalarProperty Name="PlanId" ColumnName="PlanId" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="SellerCode" ColumnName="SellerCode" />
+          <ScalarProperty Name="BuyerName" ColumnName="BuyerName" />
+          <ScalarProperty Name="BuyerCellPhone" ColumnName="BuyerCellPhone" />
+          <ScalarProperty Name="BuyerEmail" ColumnName="BuyerEmail" />
+          <ScalarProperty Name="CompanySaleId" ColumnName="CompanySaleId" />
+          <ScalarProperty Name="Mainly" ColumnName="Mainly" />
+          <ScalarProperty Name="MainlyId" ColumnName="MainlyId" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="Bus" ColumnName="Bus" />
+          <ScalarProperty Name="IdSaleMainly" ColumnName="IdSaleMainly" />
+          <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+          <ScalarProperty Name="SaleDate2" ColumnName="SaleDate2" />
+          <ScalarProperty Name="BeginingDate" ColumnName="BeginingDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppContract">
+      <EntityTypeMapping TypeName="BOPModel.AppContract">
+        <MappingFragment StoreEntitySet="AppContract">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AppCode" ColumnName="AppCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="application_area">
+      <EntityTypeMapping TypeName="BOPModel.application_area">
+        <MappingFragment StoreEntitySet="application_area">
+          <ScalarProperty Name="apparea_id" ColumnName="apparea_id" />
+          <ScalarProperty Name="apparea_description" ColumnName="apparea_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="appoiment">
+      <EntityTypeMapping TypeName="BOPModel.appoiment">
+        <MappingFragment StoreEntitySet="appoiment">
+          <ScalarProperty Name="appo_id" ColumnName="appo_id" />
+          <ScalarProperty Name="appo_date" ColumnName="appo_date" />
+          <ScalarProperty Name="appo_usercreation" ColumnName="appo_usercreation" />
+          <ScalarProperty Name="sales_id" ColumnName="sales_id" />
+          <ScalarProperty Name="uprov_id" ColumnName="uprov_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="apps">
+      <EntityTypeMapping TypeName="BOPModel.apps">
+        <MappingFragment StoreEntitySet="apps">
+          <ScalarProperty Name="app_id" ColumnName="app_id" />
+          <ScalarProperty Name="app_name" ColumnName="app_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppXUser">
+      <EntityTypeMapping TypeName="BOPModel.AppXUser">
+        <MappingFragment StoreEntitySet="AppXUser">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdAppContract" ColumnName="IdAppContract" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="idProd" ColumnName="idProd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ar">
+      <EntityTypeMapping TypeName="BOPModel.ar">
+        <MappingFragment StoreEntitySet="ar">
+          <ScalarProperty Name="LangDescr_id" ColumnName="LangDescr_id" />
+          <ScalarProperty Name="Lang_Key" ColumnName="Lang_Key" />
+          <ScalarProperty Name="Lang_Translation" ColumnName="Lang_Translation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cards">
+      <EntityTypeMapping TypeName="BOPModel.cards">
+        <MappingFragment StoreEntitySet="cards">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="characteristic_treatment">
+      <EntityTypeMapping TypeName="BOPModel.characteristic_treatment">
+        <MappingFragment StoreEntitySet="characteristic_treatment">
+          <ScalarProperty Name="chatreat_id" ColumnName="chatreat_id" />
+          <ScalarProperty Name="chatreat_description" ColumnName="chatreat_description" />
+          <ScalarProperty Name="apparea_id" ColumnName="apparea_id" />
+          <ScalarProperty Name="speci_id" ColumnName="speci_id" />
+          <ScalarProperty Name="tooth_id" ColumnName="tooth_id" />
+          <ScalarProperty Name="treat_id" ColumnName="treat_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="city">
+      <EntityTypeMapping TypeName="BOPModel.city">
+        <MappingFragment StoreEntitySet="city">
+          <ScalarProperty Name="city_id" ColumnName="city_id" />
+          <ScalarProperty Name="city_name" ColumnName="city_name" />
+          <ScalarProperty Name="states_id" ColumnName="states_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="claims">
+      <EntityTypeMapping TypeName="BOPModel.claims">
+        <MappingFragment StoreEntitySet="claims">
+          <ScalarProperty Name="claim_id" ColumnName="claim_id" />
+          <ScalarProperty Name="claim_treatcomplex" ColumnName="claim_treatcomplex" />
+          <ScalarProperty Name="claim_provucfactor" ColumnName="claim_provucfactor" />
+          <ScalarProperty Name="claim_utreatcovalue" ColumnName="claim_utreatcovalue" />
+          <ScalarProperty Name="claim_portrecoverage" ColumnName="claim_portrecoverage" />
+          <ScalarProperty Name="claim_creationdate" ColumnName="claim_creationdate" />
+          <ScalarProperty Name="claim_basevalue" ColumnName="claim_basevalue" />
+          <ScalarProperty Name="claim_uservalue" ColumnName="claim_uservalue" />
+          <ScalarProperty Name="claim_tpavalue" ColumnName="claim_tpavalue" />
+          <ScalarProperty Name="treat_id" ColumnName="treat_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="collections">
+      <EntityTypeMapping TypeName="BOPModel.collections">
+        <MappingFragment StoreEntitySet="collections">
+          <ScalarProperty Name="colle_id" ColumnName="colle_id" />
+          <ScalarProperty Name="colle_periodpayment" ColumnName="colle_periodpayment" />
+          <ScalarProperty Name="calle_value" ColumnName="calle_value" />
+          <ScalarProperty Name="invo_id" ColumnName="invo_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="commission">
+      <EntityTypeMapping TypeName="BOPModel.commission">
+        <MappingFragment StoreEntitySet="commission">
+          <ScalarProperty Name="comi_id" ColumnName="comi_id" />
+          <ScalarProperty Name="comi_participation" ColumnName="comi_participation" />
+          <ScalarProperty Name="typepartici_id" ColumnName="typepartici_id" />
+          <ScalarProperty Name="contractprod_id" ColumnName="contractprod_id" />
+          <ScalarProperty Name="groupenti_id" ColumnName="groupenti_id" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommissionForSale">
+      <EntityTypeMapping TypeName="BOPModel.CommissionForSale">
+        <MappingFragment StoreEntitySet="CommissionForSale">
+          <ScalarProperty Name="commisale_id" ColumnName="commisale_id" />
+          <ScalarProperty Name="sales_id" ColumnName="sales_id" />
+          <ScalarProperty Name="commisale_level1" ColumnName="commisale_level1" />
+          <ScalarProperty Name="commisale_level2" ColumnName="commisale_level2" />
+          <ScalarProperty Name="commisale_level3" ColumnName="commisale_level3" />
+          <ScalarProperty Name="commisale_level4" ColumnName="commisale_level4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="configurationXcontractXproducts">
+      <EntityTypeMapping TypeName="BOPModel.configurationXcontractXproducts">
+        <MappingFragment StoreEntitySet="configurationXcontractXproducts">
+          <ScalarProperty Name="confcontractprod_id" ColumnName="confcontractprod_id" />
+          <ScalarProperty Name="contractprod_id" ColumnName="contractprod_id" />
+          <ScalarProperty Name="confcontractprod_value" ColumnName="confcontractprod_value" />
+          <ScalarProperty Name="curren_id" ColumnName="curren_id" />
+          <ScalarProperty Name="info_id" ColumnName="info_id" />
+          <ScalarProperty Name="vtime_id" ColumnName="vtime_id" />
+          <ScalarProperty Name="ppay_id" ColumnName="ppay_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contract">
+      <EntityTypeMapping TypeName="BOPModel.contract">
+        <MappingFragment StoreEntitySet="contract">
+          <ScalarProperty Name="contract_id" ColumnName="contract_id" />
+          <ScalarProperty Name="contract_description" ColumnName="contract_description" />
+          <ScalarProperty Name="IdAppContract" ColumnName="IdAppContract" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contractXproducts">
+      <EntityTypeMapping TypeName="BOPModel.contractXproducts">
+        <MappingFragment StoreEntitySet="contractXproducts">
+          <ScalarProperty Name="contractprod_id" ColumnName="contractprod_id" />
+          <ScalarProperty Name="contractprod_wp" ColumnName="contractprod_wp" />
+          <ScalarProperty Name="contractprod_recurrent" ColumnName="contractprod_recurrent" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="contract_id" ColumnName="contract_id" />
+          <ScalarProperty Name="contractprod_participation" ColumnName="contractprod_participation" />
+          <ScalarProperty Name="contractprod_idfather" ColumnName="contractprod_idfather" />
+          <ScalarProperty Name="typepartici_id" ColumnName="typepartici_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="country">
+      <EntityTypeMapping TypeName="BOPModel.country">
+        <MappingFragment StoreEntitySet="country">
+          <ScalarProperty Name="country_id" ColumnName="country_id" />
+          <ScalarProperty Name="country_name" ColumnName="country_name" />
+          <ScalarProperty Name="country_continent" ColumnName="country_continent" />
+          <ScalarProperty Name="country_nameNative" ColumnName="country_nameNative" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="currency">
+      <EntityTypeMapping TypeName="BOPModel.currency">
+        <MappingFragment StoreEntitySet="currency">
+          <ScalarProperty Name="curren_id" ColumnName="curren_id" />
+          <ScalarProperty Name="curren_description" ColumnName="curren_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="de">
+      <EntityTypeMapping TypeName="BOPModel.de">
+        <MappingFragment StoreEntitySet="de">
+          <ScalarProperty Name="LangDescr_id" ColumnName="LangDescr_id" />
+          <ScalarProperty Name="Lang_Key" ColumnName="Lang_Key" />
+          <ScalarProperty Name="Lang_Translation" ColumnName="Lang_Translation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="en">
+      <EntityTypeMapping TypeName="BOPModel.en">
+        <MappingFragment StoreEntitySet="en">
+          <ScalarProperty Name="LangDescr_id" ColumnName="LangDescr_id" />
+          <ScalarProperty Name="Lang_Key" ColumnName="Lang_Key" />
+          <ScalarProperty Name="Lang_Translation" ColumnName="Lang_Translation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="entity">
+      <EntityTypeMapping TypeName="BOPModel.entity">
+        <MappingFragment StoreEntitySet="entity">
+          <ScalarProperty Name="enti_id" ColumnName="enti_id" />
+          <ScalarProperty Name="enti_name" ColumnName="enti_name" />
+          <ScalarProperty Name="enti_nit" ColumnName="enti_nit" />
+          <ScalarProperty Name="enti_latitud" ColumnName="enti_latitud" />
+          <ScalarProperty Name="enti_longitud" ColumnName="enti_longitud" />
+          <ScalarProperty Name="entype_id" ColumnName="entype_id" />
+          <ScalarProperty Name="neig_id" ColumnName="neig_id" />
+          <ScalarProperty Name="country_id" ColumnName="country_id" />
+          <ScalarProperty Name="status_id" ColumnName="status_id" />
+          <ScalarProperty Name="enti_entifather" ColumnName="enti_entifather" />
+          <ScalarProperty Name="enti_description" ColumnName="enti_description" />
+          <ScalarProperty Name="enti_logo" ColumnName="enti_logo" />
+          <ScalarProperty Name="enti_background" ColumnName="enti_background" />
+          <ScalarProperty Name="enti_maincolor" ColumnName="enti_maincolor" />
+          <ScalarProperty Name="enti_seccolor" ColumnName="enti_seccolor" />
+          <ScalarProperty Name="enti_url" ColumnName="enti_url" />
+          <ScalarProperty Name="enti_favicon" ColumnName="enti_favicon" />
+          <ScalarProperty Name="enti_EmailHolder" ColumnName="enti_EmailHolder" />
+          <ScalarProperty Name="enti_EmailCopies" ColumnName="enti_EmailCopies" />
+          <ScalarProperty Name="enti_SalesEmail" ColumnName="enti_SalesEmail" />
+          <ScalarProperty Name="enti_User" ColumnName="enti_User" />
+          <ScalarProperty Name="enti_Password" ColumnName="enti_Password" />
+          <ScalarProperty Name="enti_PublicKey" ColumnName="enti_PublicKey" />
+          <ScalarProperty Name="enti_PrivateKey" ColumnName="enti_PrivateKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="entitycontract">
+      <EntityTypeMapping TypeName="BOPModel.entitycontract">
+        <MappingFragment StoreEntitySet="entitycontract">
+          <ScalarProperty Name="enticontra_id" ColumnName="enticontra_id" />
+          <ScalarProperty Name="contract_id" ColumnName="contract_id" />
+          <ScalarProperty Name="enti_id" ColumnName="enti_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="entitytype">
+      <EntityTypeMapping TypeName="BOPModel.entitytype">
+        <MappingFragment StoreEntitySet="entitytype">
+          <ScalarProperty Name="entype_id" ColumnName="entype_id" />
+          <ScalarProperty Name="entype_description" ColumnName="entype_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="es">
+      <EntityTypeMapping TypeName="BOPModel.es">
+        <MappingFragment StoreEntitySet="es">
+          <ScalarProperty Name="LangDescr_id" ColumnName="LangDescr_id" />
+          <ScalarProperty Name="Lang_Key" ColumnName="Lang_Key" />
+          <ScalarProperty Name="Lang_Translation" ColumnName="Lang_Translation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Excepciones">
+      <EntityTypeMapping TypeName="BOPModel.Excepciones">
+        <MappingFragment StoreEntitySet="Excepciones">
+          <ScalarProperty Name="IdExcepciones" ColumnName="IdExcepciones" />
+          <ScalarProperty Name="ErrorId" ColumnName="ErrorId" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="externalUserId">
+      <EntityTypeMapping TypeName="BOPModel.externalUserId">
+        <MappingFragment StoreEntitySet="externalUserId">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userIdInternal" ColumnName="userIdInternal" />
+          <ScalarProperty Name="userIdExternal" ColumnName="userIdExternal" />
+          <ScalarProperty Name="appId" ColumnName="appId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fa">
+      <EntityTypeMapping TypeName="BOPModel.fa">
+        <MappingFragment StoreEntitySet="fa">
+          <ScalarProperty Name="LangDescr_id" ColumnName="LangDescr_id" />
+          <ScalarProperty Name="Lang_Key" ColumnName="Lang_Key" />
+          <ScalarProperty Name="Lang_Translation" ColumnName="Lang_Translation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="glosas">
+      <EntityTypeMapping TypeName="BOPModel.glosas">
+        <MappingFragment StoreEntitySet="glosas">
+          <ScalarProperty Name="glosa_id" ColumnName="glosa_id" />
+          <ScalarProperty Name="glosa_description" ColumnName="glosa_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="glosastatusclaims">
+      <EntityTypeMapping TypeName="BOPModel.glosastatusclaims">
+        <MappingFragment StoreEntitySet="glosastatusclaims">
+          <ScalarProperty Name="glostacla_id" ColumnName="glostacla_id" />
+          <ScalarProperty Name="stacla_id" ColumnName="stacla_id" />
+          <ScalarProperty Name="glosa_id" ColumnName="glosa_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="glosaXtreatments">
+      <EntityTypeMapping TypeName="BOPModel.glosaXtreatments">
+        <MappingFragment StoreEntitySet="glosaXtreatments">
+          <ScalarProperty Name="glotreat_id" ColumnName="glotreat_id" />
+          <ScalarProperty Name="glotreat_characteristic" ColumnName="glotreat_characteristic" />
+          <ScalarProperty Name="glosa_id" ColumnName="glosa_id" />
+          <ScalarProperty Name="treat_id" ColumnName="treat_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="groupXentity">
+      <EntityTypeMapping TypeName="BOPModel.groupXentity">
+        <MappingFragment StoreEntitySet="groupXentity">
+          <ScalarProperty Name="groupenti_id" ColumnName="groupenti_id" />
+          <ScalarProperty Name="groupenti_description" ColumnName="groupenti_description" />
+          <ScalarProperty Name="enti_id" ColumnName="enti_id" />
+          <ScalarProperty Name="tview_id" ColumnName="tview_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gto">
+      <EntityTypeMapping TypeName="BOPModel.gto">
+        <MappingFragment StoreEntitySet="gto">
+          <ScalarProperty Name="gto_id" ColumnName="gto_id" />
+          <ScalarProperty Name="gto_usercreation" ColumnName="gto_usercreation" />
+          <ScalarProperty Name="contractprod_id" ColumnName="contractprod_id" />
+          <ScalarProperty Name="appo_id" ColumnName="appo_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gtoclaims">
+      <EntityTypeMapping TypeName="BOPModel.gtoclaims">
+        <MappingFragment StoreEntitySet="gtoclaims">
+          <ScalarProperty Name="gtocla_id" ColumnName="gtocla_id" />
+          <ScalarProperty Name="claim_id" ColumnName="claim_id" />
+          <ScalarProperty Name="gto_id" ColumnName="gto_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="homologacion">
+      <EntityTypeMapping TypeName="BOPModel.homologacion">
+        <MappingFragment StoreEntitySet="homologacion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_plannuevadb" ColumnName="id_plannuevadb" />
+          <ScalarProperty Name="id_planilotus" ColumnName="id_planilotus" />
+          <ScalarProperty Name="serialplan" ColumnName="serialplan" />
+          <ScalarProperty Name="serialpoliza" ColumnName="serialpoliza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="homologationUpstream">
+      <EntityTypeMapping TypeName="BOPModel.homologationUpstream">
+        <MappingFragment StoreEntitySet="homologationUpstream">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="codeUpstream" ColumnName="codeUpstream" />
+          <ScalarProperty Name="idProd" ColumnName="idProd" />
+          <ScalarProperty Name="sellerCode" ColumnName="sellerCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="impuesto">
+      <EntityTypeMapping TypeName="BOPModel.impuesto">
+        <MappingFragment StoreEntitySet="impuesto">
+          <ScalarProperty Name="impu_id" ColumnName="impu_id" />
+          <ScalarProperty Name="impu_description" ColumnName="impu_description" />
+          <ScalarProperty Name="impu_name" ColumnName="impu_name" />
+          <ScalarProperty Name="impucoun_value" ColumnName="impucoun_value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="impuestoXcountry">
+      <EntityTypeMapping TypeName="BOPModel.impuestoXcountry">
+        <MappingFragment StoreEntitySet="impuestoXcountry">
+          <ScalarProperty Name="impucoun_id" ColumnName="impucoun_id" />
+          <ScalarProperty Name="country_id" ColumnName="country_id" />
+          <ScalarProperty Name="impu_id" ColumnName="impu_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InformationAditionalXApp">
+      <EntityTypeMapping TypeName="BOPModel.InformationAditionalXApp">
+        <MappingFragment StoreEntitySet="InformationAditionalXApp">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idAppContract" ColumnName="idAppContract" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="information" ColumnName="information" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="infoXcontractXprod">
+      <EntityTypeMapping TypeName="BOPModel.infoXcontractXprod">
+        <MappingFragment StoreEntitySet="infoXcontractXprod">
+          <ScalarProperty Name="info_id" ColumnName="info_id" />
+          <ScalarProperty Name="info_description" ColumnName="info_description" />
+          <ScalarProperty Name="info_peoplequantity" ColumnName="info_peoplequantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="invoices">
+      <EntityTypeMapping TypeName="BOPModel.invoices">
+        <MappingFragment StoreEntitySet="invoices">
+          <ScalarProperty Name="invo_id" ColumnName="invo_id" />
+          <ScalarProperty Name="invo_value" ColumnName="invo_value" />
+          <ScalarProperty Name="invo_paidvalue" ColumnName="invo_paidvalue" />
+          <ScalarProperty Name="invo_balance" ColumnName="invo_balance" />
+          <ScalarProperty Name="invo_duedate" ColumnName="invo_duedate" />
+          <ScalarProperty Name="invo_paiddate" ColumnName="invo_paiddate" />
+          <ScalarProperty Name="sales_id" ColumnName="sales_id" />
+          <ScalarProperty Name="status_id" ColumnName="status_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="languages">
+      <EntityTypeMapping TypeName="BOPModel.languages">
+        <MappingFragment StoreEntitySet="languages">
+          <ScalarProperty Name="lang_id" ColumnName="lang_id" />
+          <ScalarProperty Name="lang_description" ColumnName="lang_description" />
+          <ScalarProperty Name="lang_short" ColumnName="lang_short" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogWs">
+      <EntityTypeMapping TypeName="BOPModel.LogWs">
+        <MappingFragment StoreEntitySet="LogWs">
+          <ScalarProperty Name="IdLogWs" ColumnName="IdLogWs" />
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Proceso" ColumnName="Proceso" />
+          <ScalarProperty Name="DescripcionProceso" ColumnName="DescripcionProceso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="menus">
+      <EntityTypeMapping TypeName="BOPModel.menus">
+        <MappingFragment StoreEntitySet="menus">
+          <ScalarProperty Name="menu_id" ColumnName="menu_id" />
+          <ScalarProperty Name="menu_name" ColumnName="menu_name" />
+          <ScalarProperty Name="app_id" ColumnName="app_id" />
+          <ScalarProperty Name="menu_action" ColumnName="menu_action" />
+          <ScalarProperty Name="menu_controller" ColumnName="menu_controller" />
+          <ScalarProperty Name="menu_icon" ColumnName="menu_icon" />
+          <ScalarProperty Name="menu_isparent" ColumnName="menu_isparent" />
+          <ScalarProperty Name="menu_parentid" ColumnName="menu_parentid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="neighborhood">
+      <EntityTypeMapping TypeName="BOPModel.neighborhood">
+        <MappingFragment StoreEntitySet="neighborhood">
+          <ScalarProperty Name="neig_id" ColumnName="neig_id" />
+          <ScalarProperty Name="neig_name" ColumnName="neig_name" />
+          <ScalarProperty Name="city_city_id" ColumnName="city_city_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="network">
+      <EntityTypeMapping TypeName="BOPModel.network">
+        <MappingFragment StoreEntitySet="network">
+          <ScalarProperty Name="network_id" ColumnName="network_id" />
+          <ScalarProperty Name="network_description" ColumnName="network_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="otherproducts">
+      <EntityTypeMapping TypeName="BOPModel.otherproducts">
+        <MappingFragment StoreEntitySet="otherproducts">
+          <ScalarProperty Name="oprod_id" ColumnName="oprod_id" />
+          <ScalarProperty Name="oprod_description" ColumnName="oprod_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="paymentgatewayXentity">
+      <EntityTypeMapping TypeName="BOPModel.paymentgatewayXentity">
+        <MappingFragment StoreEntitySet="paymentgatewayXentity">
+          <ScalarProperty Name="paygatent_id" ColumnName="paygatent_id" />
+          <ScalarProperty Name="paygatent_decription" ColumnName="paygatent_decription" />
+          <ScalarProperty Name="enti_id" ColumnName="enti_id" />
+          <ScalarProperty Name="curren_id" ColumnName="curren_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="paymenttype">
+      <EntityTypeMapping TypeName="BOPModel.paymenttype">
+        <MappingFragment StoreEntitySet="paymenttype">
+          <ScalarProperty Name="ptype_id" ColumnName="ptype_id" />
+          <ScalarProperty Name="ptype_description" ColumnName="ptype_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="periodinactivation">
+      <EntityTypeMapping TypeName="BOPModel.periodinactivation">
+        <MappingFragment StoreEntitySet="periodinactivation">
+          <ScalarProperty Name="perinac_id" ColumnName="perinac_id" />
+          <ScalarProperty Name="perinac_description" ColumnName="perinac_description" />
+          <ScalarProperty Name="perinac_days" ColumnName="perinac_days" />
+          <ScalarProperty Name="country_id" ColumnName="country_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="periodpayment">
+      <EntityTypeMapping TypeName="BOPModel.periodpayment">
+        <MappingFragment StoreEntitySet="periodpayment">
+          <ScalarProperty Name="ppay_id" ColumnName="ppay_id" />
+          <ScalarProperty Name="ppay_description" ColumnName="ppay_description" />
+          <ScalarProperty Name="ppay_time" ColumnName="ppay_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="permissionsXmenu">
+      <EntityTypeMapping TypeName="BOPModel.permissionsXmenu">
+        <MappingFragment StoreEntitySet="permissionsXmenu">
+          <ScalarProperty Name="permimenu_id" ColumnName="permimenu_id" />
+          <ScalarProperty Name="menu_id" ColumnName="menu_id" />
+          <ScalarProperty Name="utapp_id" ColumnName="utapp_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="BOPModel.products">
+        <MappingFragment StoreEntitySet="products">
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="product_description" ColumnName="product_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="productsXcountry">
+      <EntityTypeMapping TypeName="BOPModel.productsXcountry">
+        <MappingFragment StoreEntitySet="productsXcountry">
+          <ScalarProperty Name="prodco_id" ColumnName="prodco_id" />
+          <ScalarProperty Name="country_id" ColumnName="country_id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="productsXotherproducts">
+      <EntityTypeMapping TypeName="BOPModel.productsXotherproducts">
+        <MappingFragment StoreEntitySet="productsXotherproducts">
+          <ScalarProperty Name="prodoprod_id" ColumnName="prodoprod_id" />
+          <ScalarProperty Name="oprod_id" ColumnName="oprod_id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="productsXtreatments">
+      <EntityTypeMapping TypeName="BOPModel.productsXtreatments">
+        <MappingFragment StoreEntitySet="productsXtreatments">
+          <ScalarProperty Name="prodtreat_id" ColumnName="prodtreat_id" />
+          <ScalarProperty Name="prodtreat_coverage" ColumnName="prodtreat_coverage" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="treat_id" ColumnName="treat_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="productXapp">
+      <EntityTypeMapping TypeName="BOPModel.productXapp">
+        <MappingFragment StoreEntitySet="productXapp">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AppContractId" ColumnName="AppContractId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="providers">
+      <EntityTypeMapping TypeName="BOPModel.providers">
+        <MappingFragment StoreEntitySet="providers">
+          <ScalarProperty Name="prov_id" ColumnName="prov_id" />
+          <ScalarProperty Name="prov_name" ColumnName="prov_name" />
+          <ScalarProperty Name="prov_ucfactor" ColumnName="prov_ucfactor" />
+          <ScalarProperty Name="tprov_id" ColumnName="tprov_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="providerXcontract">
+      <EntityTypeMapping TypeName="BOPModel.providerXcontract">
+        <MappingFragment StoreEntitySet="providerXcontract">
+          <ScalarProperty Name="provcontra_id" ColumnName="provcontra_id" />
+          <ScalarProperty Name="prov_id" ColumnName="prov_id" />
+          <ScalarProperty Name="contract_id" ColumnName="contract_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pt">
+      <EntityTypeMapping TypeName="BOPModel.pt">
+        <MappingFragment StoreEntitySet="pt">
+          <ScalarProperty Name="LangDescr_id" ColumnName="LangDescr_id" />
+          <ScalarProperty Name="Lang_Key" ColumnName="Lang_Key" />
+          <ScalarProperty Name="Lang_Translation" ColumnName="Lang_Translation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RandomSaleId">
+      <EntityTypeMapping TypeName="BOPModel.RandomSaleId">
+        <MappingFragment StoreEntitySet="RandomSaleId">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdRandom" ColumnName="IdRandom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="BOPModel.roles">
+        <MappingFragment StoreEntitySet="roles">
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="role_description" ColumnName="role_description" />
+          <ScalarProperty Name="role_level" ColumnName="role_level" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sales">
+      <EntityTypeMapping TypeName="BOPModel.sales">
+        <MappingFragment StoreEntitySet="sales">
+          <ScalarProperty Name="sales_id" ColumnName="sales_id" />
+          <ScalarProperty Name="sales_buyingdate" ColumnName="sales_buyingdate" />
+          <ScalarProperty Name="sales_beginingdate" ColumnName="sales_beginingdate" />
+          <ScalarProperty Name="sales_enddate" ColumnName="sales_enddate" />
+          <ScalarProperty Name="sales_sellerid" ColumnName="sales_sellerid" />
+          <ScalarProperty Name="sales_dateinactivation" ColumnName="sales_dateinactivation" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="ptype_id" ColumnName="ptype_id" />
+          <ScalarProperty Name="status_id" ColumnName="status_id" />
+          <ScalarProperty Name="confcontractprod_id" ColumnName="confcontractprod_id" />
+          <ScalarProperty Name="serial_ppac" ColumnName="serial_ppac" />
+          <ScalarProperty Name="idsale_lotus" ColumnName="idsale_lotus" />
+          <ScalarProperty Name="idsale_mainly" ColumnName="idsale_mainly" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="services">
+      <EntityTypeMapping TypeName="BOPModel.services">
+        <MappingFragment StoreEntitySet="services">
+          <ScalarProperty Name="services_id" ColumnName="services_id" />
+          <ScalarProperty Name="services_description" ColumnName="services_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servicesXapp">
+      <EntityTypeMapping TypeName="BOPModel.servicesXapp">
+        <MappingFragment StoreEntitySet="servicesXapp">
+          <ScalarProperty Name="serviapp_id" ColumnName="serviapp_id" />
+          <ScalarProperty Name="services_id" ColumnName="services_id" />
+          <ScalarProperty Name="app_id" ColumnName="app_id" />
+          <ScalarProperty Name="network_id" ColumnName="network_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servicesXnetwork">
+      <EntityTypeMapping TypeName="BOPModel.servicesXnetwork">
+        <MappingFragment StoreEntitySet="servicesXnetwork">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idService" ColumnName="idService" />
+          <ScalarProperty Name="idNetwork" ColumnName="idNetwork" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servicesXproduct">
+      <EntityTypeMapping TypeName="BOPModel.servicesXproduct">
+        <MappingFragment StoreEntitySet="servicesXproduct">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idService" ColumnName="idService" />
+          <ScalarProperty Name="idProduct" ColumnName="idProduct" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="specialty">
+      <EntityTypeMapping TypeName="BOPModel.specialty">
+        <MappingFragment StoreEntitySet="specialty">
+          <ScalarProperty Name="speci_id" ColumnName="speci_id" />
+          <ScalarProperty Name="speci_description" ColumnName="speci_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="states">
+      <EntityTypeMapping TypeName="BOPModel.states">
+        <MappingFragment StoreEntitySet="states">
+          <ScalarProperty Name="states_id" ColumnName="states_id" />
+          <ScalarProperty Name="states_name" ColumnName="states_name" />
+          <ScalarProperty Name="country_id" ColumnName="country_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="status">
+      <EntityTypeMapping TypeName="BOPModel.status">
+        <MappingFragment StoreEntitySet="status">
+          <ScalarProperty Name="status_id" ColumnName="status_id" />
+          <ScalarProperty Name="status_description" ColumnName="status_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="statusclaims">
+      <EntityTypeMapping TypeName="BOPModel.statusclaims">
+        <MappingFragment StoreEntitySet="statusclaims">
+          <ScalarProperty Name="stacla_id" ColumnName="stacla_id" />
+          <ScalarProperty Name="stacla_datemodify" ColumnName="stacla_datemodify" />
+          <ScalarProperty Name="stacla_usermodify" ColumnName="stacla_usermodify" />
+          <ScalarProperty Name="stacla_userdentist" ColumnName="stacla_userdentist" />
+          <ScalarProperty Name="stacla_closedate" ColumnName="stacla_closedate" />
+          <ScalarProperty Name="claim_id" ColumnName="claim_id" />
+          <ScalarProperty Name="status_id" ColumnName="status_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BOPModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="token">
+      <EntityTypeMapping TypeName="BOPModel.token">
+        <MappingFragment StoreEntitySet="token">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cellPhone" ColumnName="cellPhone" />
+          <ScalarProperty Name="token1" ColumnName="token" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tooth">
+      <EntityTypeMapping TypeName="BOPModel.tooth">
+        <MappingFragment StoreEntitySet="tooth">
+          <ScalarProperty Name="tooth_id" ColumnName="tooth_id" />
+          <ScalarProperty Name="tooth_numberTooth" ColumnName="tooth_numberTooth" />
+          <ScalarProperty Name="tooth_description" ColumnName="tooth_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="treatments">
+      <EntityTypeMapping TypeName="BOPModel.treatments">
+        <MappingFragment StoreEntitySet="treatments">
+          <ScalarProperty Name="treat_id" ColumnName="treat_id" />
+          <ScalarProperty Name="treat_code" ColumnName="treat_code" />
+          <ScalarProperty Name="treat_description" ColumnName="treat_description" />
+          <ScalarProperty Name="treat_complex" ColumnName="treat_complex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="treatmentsXcountry">
+      <EntityTypeMapping TypeName="BOPModel.treatmentsXcountry">
+        <MappingFragment StoreEntitySet="treatmentsXcountry">
+          <ScalarProperty Name="treatco_id" ColumnName="treatco_id" />
+          <ScalarProperty Name="treatco_codecountry" ColumnName="treatco_codecountry" />
+          <ScalarProperty Name="treatco_description" ColumnName="treatco_description" />
+          <ScalarProperty Name="treat_id" ColumnName="treat_id" />
+          <ScalarProperty Name="country_id" ColumnName="country_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="typeparticipation">
+      <EntityTypeMapping TypeName="BOPModel.typeparticipation">
+        <MappingFragment StoreEntitySet="typeparticipation">
+          <ScalarProperty Name="typepartici_id" ColumnName="typepartici_id" />
+          <ScalarProperty Name="typepartici_description" ColumnName="typepartici_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="typeprovider">
+      <EntityTypeMapping TypeName="BOPModel.typeprovider">
+        <MappingFragment StoreEntitySet="typeprovider">
+          <ScalarProperty Name="tprov_id" ColumnName="tprov_id" />
+          <ScalarProperty Name="tprov_description" ColumnName="tprov_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="typeXviews">
+      <EntityTypeMapping TypeName="BOPModel.typeXviews">
+        <MappingFragment StoreEntitySet="typeXviews">
+          <ScalarProperty Name="tview_id" ColumnName="tview_id" />
+          <ScalarProperty Name="tview_description" ColumnName="tview_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uctreatconuntry">
+      <EntityTypeMapping TypeName="BOPModel.uctreatconuntry">
+        <MappingFragment StoreEntitySet="uctreatconuntry">
+          <ScalarProperty Name="utreatco_id" ColumnName="utreatco_id" />
+          <ScalarProperty Name="utreatco_value" ColumnName="utreatco_value" />
+          <ScalarProperty Name="utreatco_datefrom" ColumnName="utreatco_datefrom" />
+          <ScalarProperty Name="utreatco_dateto" ColumnName="utreatco_dateto" />
+          <ScalarProperty Name="country_id" ColumnName="country_id" />
+          <ScalarProperty Name="curren_id" ColumnName="curren_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="useraudituc">
+      <EntityTypeMapping TypeName="BOPModel.useraudituc">
+        <MappingFragment StoreEntitySet="useraudituc">
+          <ScalarProperty Name="uaudit_id" ColumnName="uaudit_id" />
+          <ScalarProperty Name="uaudit_uc" ColumnName="uaudit_uc" />
+          <ScalarProperty Name="uaudit_modifydate" ColumnName="uaudit_modifydate" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="BOPModel.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_icard" ColumnName="user_icard" />
+          <ScalarProperty Name="user_firstname" ColumnName="user_firstname" />
+          <ScalarProperty Name="user_lastname" ColumnName="user_lastname" />
+          <ScalarProperty Name="user_icardtitular" ColumnName="user_icardtitular" />
+          <ScalarProperty Name="user_uc" ColumnName="user_uc" />
+          <ScalarProperty Name="status_id" ColumnName="status_id" />
+          <ScalarProperty Name="user_email" ColumnName="user_email" />
+          <ScalarProperty Name="user_password" ColumnName="user_password" />
+          <ScalarProperty Name="user_password_changed" ColumnName="user_password_changed" />
+          <ScalarProperty Name="user_last_activity" ColumnName="user_last_activity" />
+          <ScalarProperty Name="user_lang" ColumnName="user_lang" />
+          <ScalarProperty Name="user_sellerCode" ColumnName="user_sellerCode" />
+          <ScalarProperty Name="user_birthdate" ColumnName="user_birthdate" />
+          <ScalarProperty Name="user_gender" ColumnName="user_gender" />
+          <ScalarProperty Name="user_cellphone" ColumnName="user_cellphone" />
+          <ScalarProperty Name="user_address" ColumnName="user_address" />
+          <ScalarProperty Name="country_id" ColumnName="country_id" />
+          <ScalarProperty Name="user_urlimg" ColumnName="user_urlimg" />
+          <ScalarProperty Name="CarNumber" ColumnName="CarNumber" />
+          <ScalarProperty Name="user_creation" ColumnName="user_creation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usersXentity">
+      <EntityTypeMapping TypeName="BOPModel.usersXentity">
+        <MappingFragment StoreEntitySet="usersXentity">
+          <ScalarProperty Name="uenti_id" ColumnName="uenti_id" />
+          <ScalarProperty Name="enti_id" ColumnName="enti_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usersXgroup">
+      <EntityTypeMapping TypeName="BOPModel.usersXgroup">
+        <MappingFragment StoreEntitySet="usersXgroup">
+          <ScalarProperty Name="ugroup_id" ColumnName="ugroup_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="groupenti_id" ColumnName="groupenti_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usersXprovider">
+      <EntityTypeMapping TypeName="BOPModel.usersXprovider">
+        <MappingFragment StoreEntitySet="usersXprovider">
+          <ScalarProperty Name="uprov_id" ColumnName="uprov_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="prov_id" ColumnName="prov_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usertypeXapp">
+      <EntityTypeMapping TypeName="BOPModel.usertypeXapp">
+        <MappingFragment StoreEntitySet="usertypeXapp">
+          <ScalarProperty Name="utapp_id" ColumnName="utapp_id" />
+          <ScalarProperty Name="utype_id" ColumnName="utype_id" />
+          <ScalarProperty Name="app_id" ColumnName="app_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="validitytime">
+      <EntityTypeMapping TypeName="BOPModel.validitytime">
+        <MappingFragment StoreEntitySet="validitytime">
+          <ScalarProperty Name="vtime_id" ColumnName="vtime_id" />
+          <ScalarProperty Name="vtime_description" ColumnName="vtime_description" />
+          <ScalarProperty Name="vtime_days" ColumnName="vtime_days" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="channels">
+      <EntityTypeMapping TypeName="BOPModel.channels">
+        <MappingFragment StoreEntitySet="channels">
+          <ScalarProperty Name="channel_id" ColumnName="channel_id" />
+          <ScalarProperty Name="channel_description" ColumnName="channel_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="commentaryXticket">
+      <EntityTypeMapping TypeName="BOPModel.commentaryXticket">
+        <MappingFragment StoreEntitySet="commentaryXticket">
+          <ScalarProperty Name="commentick_id" ColumnName="commentick_id" />
+          <ScalarProperty Name="tick_id" ColumnName="tick_id" />
+          <ScalarProperty Name="commentick_observation" ColumnName="commentick_observation" />
+          <ScalarProperty Name="commentick_userid" ColumnName="commentick_userid" />
+          <ScalarProperty Name="vicomment_id" ColumnName="vicomment_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="priorityXticket">
+      <EntityTypeMapping TypeName="BOPModel.priorityXticket">
+        <MappingFragment StoreEntitySet="priorityXticket">
+          <ScalarProperty Name="prioritytick_id" ColumnName="prioritytick_id" />
+          <ScalarProperty Name="prioritytick_description" ColumnName="prioritytick_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="statusXticket">
+      <EntityTypeMapping TypeName="BOPModel.statusXticket">
+        <MappingFragment StoreEntitySet="statusXticket">
+          <ScalarProperty Name="statustick_id" ColumnName="statustick_id" />
+          <ScalarProperty Name="statustick_description" ColumnName="statustick_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="subjectXticket">
+      <EntityTypeMapping TypeName="BOPModel.subjectXticket">
+        <MappingFragment StoreEntitySet="subjectXticket">
+          <ScalarProperty Name="subjtick_id" ColumnName="subjtick_id" />
+          <ScalarProperty Name="subjtick_description" ColumnName="subjtick_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ticket">
+      <EntityTypeMapping TypeName="BOPModel.ticket">
+        <MappingFragment StoreEntitySet="ticket">
+          <ScalarProperty Name="tick_id" ColumnName="tick_id" />
+          <ScalarProperty Name="typetick_id" ColumnName="typetick_id" />
+          <ScalarProperty Name="subjtick_id" ColumnName="subjtick_id" />
+          <ScalarProperty Name="prioritytick_id" ColumnName="prioritytick_id" />
+          <ScalarProperty Name="tick_observation" ColumnName="tick_observation" />
+          <ScalarProperty Name="tick_userid" ColumnName="tick_userid" />
+          <ScalarProperty Name="tick_agenteid" ColumnName="tick_agenteid" />
+          <ScalarProperty Name="tick_responsible" ColumnName="tick_responsible" />
+          <ScalarProperty Name="chan_id" ColumnName="chan_id" />
+          <ScalarProperty Name="statustick_id" ColumnName="statustick_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="typeXticket">
+      <EntityTypeMapping TypeName="BOPModel.typeXticket">
+        <MappingFragment StoreEntitySet="typeXticket">
+          <ScalarProperty Name="typetick_id" ColumnName="typetick_id" />
+          <ScalarProperty Name="typetick_description" ColumnName="typetick_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="visibilityXcommentary">
+      <EntityTypeMapping TypeName="BOPModel.visibilityXcommentary">
+        <MappingFragment StoreEntitySet="visibilityXcommentary">
+          <ScalarProperty Name="vicomment_id" ColumnName="vicomment_id" />
+          <ScalarProperty Name="vicomment_description" ColumnName="vicomment_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="borrar_users">
+      <EntityTypeMapping TypeName="BOPModel.borrar_users">
+        <MappingFragment StoreEntitySet="borrar_users">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_icard" ColumnName="user_icard" />
+          <ScalarProperty Name="user_firstname" ColumnName="user_firstname" />
+          <ScalarProperty Name="user_lastname" ColumnName="user_lastname" />
+          <ScalarProperty Name="user_icardtitular" ColumnName="user_icardtitular" />
+          <ScalarProperty Name="user_uc" ColumnName="user_uc" />
+          <ScalarProperty Name="status_id" ColumnName="status_id" />
+          <ScalarProperty Name="user_email" ColumnName="user_email" />
+          <ScalarProperty Name="user_password" ColumnName="user_password" />
+          <ScalarProperty Name="user_password_changed" ColumnName="user_password_changed" />
+          <ScalarProperty Name="user_last_activity" ColumnName="user_last_activity" />
+          <ScalarProperty Name="user_lang" ColumnName="user_lang" />
+          <ScalarProperty Name="user_sellerCode" ColumnName="user_sellerCode" />
+          <ScalarProperty Name="user_birthdate" ColumnName="user_birthdate" />
+          <ScalarProperty Name="user_gender" ColumnName="user_gender" />
+          <ScalarProperty Name="user_cellphone" ColumnName="user_cellphone" />
+          <ScalarProperty Name="user_address" ColumnName="user_address" />
+          <ScalarProperty Name="country_id" ColumnName="country_id" />
+          <ScalarProperty Name="user_urlimg" ColumnName="user_urlimg" />
+          <ScalarProperty Name="CarNumber" ColumnName="CarNumber" />
+          <ScalarProperty Name="user_creation" ColumnName="user_creation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rolesXuser">
+      <EntityTypeMapping TypeName="BOPModel.rolesXuser">
+        <MappingFragment StoreEntitySet="rolesXuser">
+          <ScalarProperty Name="roluser_id" ColumnName="roluser_id" />
+          <ScalarProperty Name="rol_id" ColumnName="rol_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SaveAllTheSales" FunctionName="BOPModel.Store.SaveAllTheSales" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="BOPModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_CalculateCommission" FunctionName="BOPModel.Store.sp_CalculateCommission" />
+    <FunctionImportMapping FunctionImportName="sp_cancelSale_Bus" FunctionName="BOPModel.Store.sp_cancelSale_Bus" />
+    <FunctionImportMapping FunctionImportName="sp_ChangePassword" FunctionName="BOPModel.Store.sp_ChangePassword" />
+    <FunctionImportMapping FunctionImportName="sp_ChargeNotification" FunctionName="BOPModel.Store.sp_ChargeNotification">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_ChargeNotification_Result">
+          <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+          <ScalarProperty Name="ValidUntil" ColumnName="ValidUntil" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_consultUser" FunctionName="BOPModel.Store.sp_consultUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_consultUser_Result">
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="CelularUsuario" ColumnName="CelularUsuario" />
+          <ScalarProperty Name="NoCarnet" ColumnName="NoCarnet" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="AppCode" ColumnName="AppCode" />
+          <ScalarProperty Name="FechaActivacion" ColumnName="FechaActivacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="BOPModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_createGroupNew" FunctionName="BOPModel.Store.sp_createGroupNew" />
+    <FunctionImportMapping FunctionImportName="sp_createMenus" FunctionName="BOPModel.Store.sp_createMenus" />
+    <FunctionImportMapping FunctionImportName="sp_createProducts" FunctionName="BOPModel.Store.sp_createProducts" />
+    <FunctionImportMapping FunctionImportName="sp_CreateTicket" FunctionName="BOPModel.Store.sp_CreateTicket" />
+    <FunctionImportMapping FunctionImportName="sp_createUser" FunctionName="BOPModel.Store.sp_createUser" />
+    <FunctionImportMapping FunctionImportName="sp_CurrentPlan_X_User" FunctionName="BOPModel.Store.sp_CurrentPlan_X_User">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_CurrentPlan_X_User_Result">
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="DateDesactivation" ColumnName="DateDesactivation" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DistributionMasterBus" FunctionName="BOPModel.Store.sp_DistributionMasterBus" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="BOPModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_eliminar" FunctionName="BOPModel.Store.sp_eliminar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_eliminar_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdSale" ColumnName="IdSale" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="CustomerFirstName" ColumnName="CustomerFirstName" />
+          <ScalarProperty Name="CustomerLastName" ColumnName="CustomerLastName" />
+          <ScalarProperty Name="CustomerBirthday" ColumnName="CustomerBirthday" />
+          <ScalarProperty Name="CustomerEmail" ColumnName="CustomerEmail" />
+          <ScalarProperty Name="CustomerCellphone" ColumnName="CustomerCellphone" />
+          <ScalarProperty Name="CustomerGender" ColumnName="CustomerGender" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="StatesId" ColumnName="StatesId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="CustomerZipCode" ColumnName="CustomerZipCode" />
+          <ScalarProperty Name="CustomerStreet" ColumnName="CustomerStreet" />
+          <ScalarProperty Name="CustomerPlateNumber" ColumnName="CustomerPlateNumber" />
+          <ScalarProperty Name="CustomerComplement" ColumnName="CustomerComplement" />
+          <ScalarProperty Name="CustomerNameMother" ColumnName="CustomerNameMother" />
+          <ScalarProperty Name="PlanId" ColumnName="PlanId" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="SellerCode" ColumnName="SellerCode" />
+          <ScalarProperty Name="BuyerName" ColumnName="BuyerName" />
+          <ScalarProperty Name="BuyerCellPhone" ColumnName="BuyerCellPhone" />
+          <ScalarProperty Name="BuyerEmail" ColumnName="BuyerEmail" />
+          <ScalarProperty Name="CompanySaleId" ColumnName="CompanySaleId" />
+          <ScalarProperty Name="Mainly" ColumnName="Mainly" />
+          <ScalarProperty Name="MainlyId" ColumnName="MainlyId" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="Bus" ColumnName="Bus" />
+          <ScalarProperty Name="IdSaleMainly" ColumnName="IdSaleMainly" />
+          <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+          <ScalarProperty Name="SaleDate2" ColumnName="SaleDate2" />
+          <ScalarProperty Name="BeginingDate" ColumnName="BeginingDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_entity" FunctionName="BOPModel.Store.sp_entity" />
+    <FunctionImportMapping FunctionImportName="sp_ExternalnternalId" FunctionName="BOPModel.Store.sp_ExternalnternalId" />
+    <FunctionImportMapping FunctionImportName="sp_FileFuncional" FunctionName="BOPModel.Store.sp_FileFuncional" />
+    <FunctionImportMapping FunctionImportName="sp_FotgotPassword_" FunctionName="BOPModel.Store.sp_FotgotPassword_" />
+    <FunctionImportMapping FunctionImportName="sp_GetAddressXUser" FunctionName="BOPModel.Store.sp_GetAddressXUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetAddressXUser_Result">
+          <ScalarProperty Name="AddressType" ColumnName="AddressType" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetAllContracts" FunctionName="BOPModel.Store.sp_GetAllContracts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetAllContracts_Result">
+          <ScalarProperty Name="Contract" ColumnName="Contract" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="ContractProductId" ColumnName="ContractProductId" />
+          <ScalarProperty Name="ContractProductWp" ColumnName="ContractProductWp" />
+          <ScalarProperty Name="ContractProductRecurrent" ColumnName="ContractProductRecurrent" />
+          <ScalarProperty Name="Comission" ColumnName="Comission" />
+          <ScalarProperty Name="ComissionTypeId" ColumnName="ComissionTypeId" />
+          <ScalarProperty Name="ComissionType" ColumnName="ComissionType" />
+          <ScalarProperty Name="MaxComission" ColumnName="MaxComission" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ComiId" ColumnName="ComiId" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetApps" FunctionName="BOPModel.Store.sp_GetApps">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetApps_Result">
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="AppName" ColumnName="AppName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetCompany" FunctionName="BOPModel.Store.sp_GetCompany">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetCompany_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="background" ColumnName="background" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="favicon" ColumnName="favicon" />
+          <ScalarProperty Name="logo" ColumnName="logo" />
+          <ScalarProperty Name="maincolor" ColumnName="maincolor" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="nit" ColumnName="nit" />
+          <ScalarProperty Name="seccolor" ColumnName="seccolor" />
+          <ScalarProperty Name="url" ColumnName="url" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetContracts" FunctionName="BOPModel.Store.sp_GetContracts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetContracts_Result">
+          <ScalarProperty Name="ContractDescription" ColumnName="ContractDescription" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetCountries" FunctionName="BOPModel.Store.sp_GetCountries">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetCountries_Result">
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetCurrencies" FunctionName="BOPModel.Store.sp_GetCurrencies">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetCurrencies_Result">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetEntities" FunctionName="BOPModel.Store.sp_GetEntities">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetEntities_Result">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="EntityTypeId" ColumnName="EntityTypeId" />
+          <ScalarProperty Name="EntityType" ColumnName="EntityType" />
+          <ScalarProperty Name="EntityBackground" ColumnName="EntityBackground" />
+          <ScalarProperty Name="EntityDescription" ColumnName="EntityDescription" />
+          <ScalarProperty Name="EntityEmailCopies" ColumnName="EntityEmailCopies" />
+          <ScalarProperty Name="EntityEmailHolder" ColumnName="EntityEmailHolder" />
+          <ScalarProperty Name="EntityFavicon" ColumnName="EntityFavicon" />
+          <ScalarProperty Name="EntityId" ColumnName="EntityId" />
+          <ScalarProperty Name="EntityLatitud" ColumnName="EntityLatitud" />
+          <ScalarProperty Name="EntityLogo" ColumnName="EntityLogo" />
+          <ScalarProperty Name="EntityLongitud" ColumnName="EntityLongitud" />
+          <ScalarProperty Name="EntityMaincolor" ColumnName="EntityMaincolor" />
+          <ScalarProperty Name="EntityName" ColumnName="EntityName" />
+          <ScalarProperty Name="EntityNit" ColumnName="EntityNit" />
+          <ScalarProperty Name="EntitySalesEmail" ColumnName="EntitySalesEmail" />
+          <ScalarProperty Name="EntitySeccolor" ColumnName="EntitySeccolor" />
+          <ScalarProperty Name="EntityUrl" ColumnName="EntityUrl" />
+          <ScalarProperty Name="Entityfather" ColumnName="Entityfather" />
+          <ScalarProperty Name="NeigId" ColumnName="NeigId" />
+          <ScalarProperty Name="Neig" ColumnName="Neig" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetEntity" FunctionName="BOPModel.Store.sp_GetEntity" />
+    <FunctionImportMapping FunctionImportName="sp_GetEntityType" FunctionName="BOPModel.Store.sp_GetEntityType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetEntityType_Result">
+          <ScalarProperty Name="EntypeDescription" ColumnName="EntypeDescription" />
+          <ScalarProperty Name="EntypeId" ColumnName="EntypeId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetGroupxEntity" FunctionName="BOPModel.Store.sp_GetGroupxEntity">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetGroupxEntity_Result">
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetInfoxContractxProd" FunctionName="BOPModel.Store.sp_GetInfoxContractxProd">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetInfoxContractxProd_Result">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="LifesQuantity" ColumnName="LifesQuantity" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetLanguages" FunctionName="BOPModel.Store.sp_GetLanguages">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetLanguages_Result">
+          <ScalarProperty Name="LanguageDescription" ColumnName="LanguageDescription" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="LanguageShort" ColumnName="LanguageShort" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetMenuxApp" FunctionName="BOPModel.Store.sp_GetMenuxApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetMenuxApp_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Controller" ColumnName="Controller" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="IsParent" ColumnName="IsParent" />
+          <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetPaymentPeriod" FunctionName="BOPModel.Store.sp_GetPaymentPeriod">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetPaymentPeriod_Result">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetProducts" FunctionName="BOPModel.Store.sp_GetProducts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetProducts_Result">
+          <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetProductXUser" FunctionName="BOPModel.Store.sp_GetProductXUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetProductXUser_Result">
+          <ScalarProperty Name="PlanCode" ColumnName="PlanCode" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="PlanValue" ColumnName="PlanValue" />
+          <ScalarProperty Name="ValidityDate" ColumnName="ValidityDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetRoles" FunctionName="BOPModel.Store.sp_GetRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetRoles_Result">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="RoleLevel" ColumnName="RoleLevel" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetSalesMainCustomer" FunctionName="BOPModel.Store.sp_GetSalesMainCustomer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetSalesMainCustomer_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdSale" ColumnName="IdSale" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="CustomerFirstName" ColumnName="CustomerFirstName" />
+          <ScalarProperty Name="CustomerLastName" ColumnName="CustomerLastName" />
+          <ScalarProperty Name="CustomerBirthday" ColumnName="CustomerBirthday" />
+          <ScalarProperty Name="CustomerEmail" ColumnName="CustomerEmail" />
+          <ScalarProperty Name="CustomerCellphone" ColumnName="CustomerCellphone" />
+          <ScalarProperty Name="CustomerGender" ColumnName="CustomerGender" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="StatesId" ColumnName="StatesId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="CustomerZipCode" ColumnName="CustomerZipCode" />
+          <ScalarProperty Name="CustomerStreet" ColumnName="CustomerStreet" />
+          <ScalarProperty Name="CustomerPlateNumber" ColumnName="CustomerPlateNumber" />
+          <ScalarProperty Name="CustomerComplement" ColumnName="CustomerComplement" />
+          <ScalarProperty Name="CustomerNameMother" ColumnName="CustomerNameMother" />
+          <ScalarProperty Name="PlanId" ColumnName="PlanId" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="SellerCode" ColumnName="SellerCode" />
+          <ScalarProperty Name="BuyerName" ColumnName="BuyerName" />
+          <ScalarProperty Name="BuyerCellPhone" ColumnName="BuyerCellPhone" />
+          <ScalarProperty Name="BuyerEmail" ColumnName="BuyerEmail" />
+          <ScalarProperty Name="CompanySaleId" ColumnName="CompanySaleId" />
+          <ScalarProperty Name="Mainly" ColumnName="Mainly" />
+          <ScalarProperty Name="MainlyId" ColumnName="MainlyId" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="Bus" ColumnName="Bus" />
+          <ScalarProperty Name="IdSaleMainly" ColumnName="IdSaleMainly" />
+          <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+          <ScalarProperty Name="SaleDate2" ColumnName="SaleDate2" />
+          <ScalarProperty Name="BeginingDate" ColumnName="BeginingDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetTreatments" FunctionName="BOPModel.Store.sp_GetTreatments">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetTreatments_Result">
+          <ScalarProperty Name="TreatCode" ColumnName="TreatCode" />
+          <ScalarProperty Name="TreatComplex" ColumnName="TreatComplex" />
+          <ScalarProperty Name="TreatDescription" ColumnName="TreatDescription" />
+          <ScalarProperty Name="TreatId" ColumnName="TreatId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetUser" FunctionName="BOPModel.Store.sp_GetUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetUser_Result">
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserIcard" ColumnName="UserIcard" />
+          <ScalarProperty Name="UserIcardtitular" ColumnName="UserIcardtitular" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserLastname" ColumnName="UserLastname" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserUc" ColumnName="UserUc" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SellerCode" ColumnName="SellerCode" />
+          <ScalarProperty Name="UserLanguage" ColumnName="UserLanguage" />
+          <ScalarProperty Name="UserLanguageDescription" ColumnName="UserLanguageDescription" />
+          <ScalarProperty Name="PasswordChanged" ColumnName="PasswordChanged" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+          <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="LastActivity" ColumnName="LastActivity" />
+          <ScalarProperty Name="pictureUrl" ColumnName="pictureUrl" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CarNumber" ColumnName="CarNumber" />
+          <ScalarProperty Name="AppName" ColumnName="AppName" />
+          <ScalarProperty Name="ExternalUserId" ColumnName="ExternalUserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetUser2" FunctionName="BOPModel.Store.sp_GetUser2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetUser2_Result">
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserIcard" ColumnName="UserIcard" />
+          <ScalarProperty Name="UserIcardtitular" ColumnName="UserIcardtitular" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserLastname" ColumnName="UserLastname" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserUc" ColumnName="UserUc" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SellerCode" ColumnName="SellerCode" />
+          <ScalarProperty Name="UserLanguage" ColumnName="UserLanguage" />
+          <ScalarProperty Name="UserLanguageDescription" ColumnName="UserLanguageDescription" />
+          <ScalarProperty Name="PasswordChanged" ColumnName="PasswordChanged" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+          <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="LastActivity" ColumnName="LastActivity" />
+          <ScalarProperty Name="ProfilePicture" ColumnName="ProfilePicture" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CarNumber" ColumnName="CarNumber" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetValidityTime" FunctionName="BOPModel.Store.sp_GetValidityTime">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetValidityTime_Result">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Days" ColumnName="Days" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="BOPModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="BOPModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_info_usuarios" FunctionName="BOPModel.Store.sp_info_usuarios">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_info_usuarios_Result">
+          <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Fecha_nacimiento" ColumnName="Fecha_nacimiento" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Tarjeta" ColumnName="Tarjeta" />
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="Codigo_App" ColumnName="Codigo_App" />
+          <ScalarProperty Name="Codigo_Nombre" ColumnName="Codigo_Nombre" />
+          <ScalarProperty Name="Fecha_inicio" ColumnName="Fecha_inicio" />
+          <ScalarProperty Name="Fecha_terminacion" ColumnName="Fecha_terminacion" />
+          <ScalarProperty Name="valor_factura" ColumnName="valor_factura" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_info_usuarios_activos" FunctionName="BOPModel.Store.sp_info_usuarios_activos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_info_usuarios_activos_Result">
+          <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Fecha_nacimiento" ColumnName="Fecha_nacimiento" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Tarjeta" ColumnName="Tarjeta" />
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="Codigo_App" ColumnName="Codigo_App" />
+          <ScalarProperty Name="Codigo_Nombre" ColumnName="Codigo_Nombre" />
+          <ScalarProperty Name="fecha_ini" ColumnName="fecha_ini" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+          <ScalarProperty Name="vtime_days" ColumnName="vtime_days" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_info_usuarios_cantidades" FunctionName="BOPModel.Store.sp_info_usuarios_cantidades" />
+    <FunctionImportMapping FunctionImportName="sp_info_usuarios_inactivos" FunctionName="BOPModel.Store.sp_info_usuarios_inactivos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_info_usuarios_inactivos_Result">
+          <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Fecha_nacimiento" ColumnName="Fecha_nacimiento" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Tarjeta" ColumnName="Tarjeta" />
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="Codigo_App" ColumnName="Codigo_App" />
+          <ScalarProperty Name="Codigo_Nombre" ColumnName="Codigo_Nombre" />
+          <ScalarProperty Name="fecha_ini" ColumnName="fecha_ini" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+          <ScalarProperty Name="vtime_days" ColumnName="vtime_days" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_info_usuarios_intervalo" FunctionName="BOPModel.Store.sp_info_usuarios_intervalo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_info_usuarios_intervalo_Result">
+          <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Fecha_nacimiento" ColumnName="Fecha_nacimiento" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Tarjeta" ColumnName="Tarjeta" />
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="Codigo_App" ColumnName="Codigo_App" />
+          <ScalarProperty Name="Codigo_Nombre" ColumnName="Codigo_Nombre" />
+          <ScalarProperty Name="fecha_ini" ColumnName="fecha_ini" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_info_usuarios_no_activos" FunctionName="BOPModel.Store.sp_info_usuarios_no_activos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_info_usuarios_no_activos_Result">
+          <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Fecha_nacimiento" ColumnName="Fecha_nacimiento" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Tarjeta" ColumnName="Tarjeta" />
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="Codigo_App" ColumnName="Codigo_App" />
+          <ScalarProperty Name="Codigo_Nombre" ColumnName="Codigo_Nombre" />
+          <ScalarProperty Name="fecha_ini" ColumnName="fecha_ini" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+          <ScalarProperty Name="vtime_days" ColumnName="vtime_days" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_InfoReportSaleSeller" FunctionName="BOPModel.Store.sp_InfoReportSaleSeller">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_InfoReportSaleSeller_Result">
+          <ScalarProperty Name="idSale" ColumnName="idSale" />
+          <ScalarProperty Name="cellphone" ColumnName="cellphone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="product" ColumnName="product" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="commission" ColumnName="commission" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ListChildren" FunctionName="BOPModel.Store.sp_ListChildren">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_ListChildren_Result">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_icard" ColumnName="user_icard" />
+          <ScalarProperty Name="user_firstname" ColumnName="user_firstname" />
+          <ScalarProperty Name="user_lastname" ColumnName="user_lastname" />
+          <ScalarProperty Name="user_icardtitular" ColumnName="user_icardtitular" />
+          <ScalarProperty Name="user_uc" ColumnName="user_uc" />
+          <ScalarProperty Name="status_id" ColumnName="status_id" />
+          <ScalarProperty Name="user_email" ColumnName="user_email" />
+          <ScalarProperty Name="user_sellerCode" ColumnName="user_sellerCode" />
+          <ScalarProperty Name="user_birthdate" ColumnName="user_birthdate" />
+          <ScalarProperty Name="user_gender" ColumnName="user_gender" />
+          <ScalarProperty Name="user_cellphone" ColumnName="user_cellphone" />
+          <ScalarProperty Name="user_address" ColumnName="user_address" />
+          <ScalarProperty Name="country_id" ColumnName="country_id" />
+          <ScalarProperty Name="role_description" ColumnName="role_description" />
+          <ScalarProperty Name="id_grupo" ColumnName="id_grupo" />
+          <ScalarProperty Name="group_name" ColumnName="group_name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_NewEntity" FunctionName="BOPModel.Store.sp_NewEntity" />
+    <FunctionImportMapping FunctionImportName="sp_ProductApp" FunctionName="BOPModel.Store.sp_ProductApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_ProductApp_Result">
+          <ScalarProperty Name="PlanCode" ColumnName="PlanCode" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="PlanValue" ColumnName="PlanValue" />
+          <ScalarProperty Name="ValidityDate" ColumnName="ValidityDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_PropertiesXApp" FunctionName="BOPModel.Store.sp_PropertiesXApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_PropertiesXApp_Result">
+          <ScalarProperty Name="HEAD" ColumnName="HEAD" />
+          <ScalarProperty Name="DETAIL" ColumnName="DETAIL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="BOPModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_ReportSaleProduct" FunctionName="BOPModel.Store.sp_ReportSaleProduct">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_ReportSaleProduct_Result">
+          <ScalarProperty Name="DescriptionName" ColumnName="DescriptionName" />
+          <ScalarProperty Name="Counting" ColumnName="Counting" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ReportSaleSeller" FunctionName="BOPModel.Store.sp_ReportSaleSeller">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_ReportSaleSeller_Result">
+          <ScalarProperty Name="SalesQuantityDay" ColumnName="SalesQuantityDay" />
+          <ScalarProperty Name="SaleValueDay" ColumnName="SaleValueDay" />
+          <ScalarProperty Name="SalesQuantityWeek" ColumnName="SalesQuantityWeek" />
+          <ScalarProperty Name="SaleValueWeek" ColumnName="SaleValueWeek" />
+          <ScalarProperty Name="SalesQuantityMonth" ColumnName="SalesQuantityMonth" />
+          <ScalarProperty Name="SaleValueMonth" ColumnName="SaleValueMonth" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ResetPassword" FunctionName="BOPModel.Store.sp_ResetPassword" />
+    <FunctionImportMapping FunctionImportName="sp_SalesReport" FunctionName="BOPModel.Store.sp_SalesReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_SalesReport_Result">
+          <ScalarProperty Name="SalesQuantityDay" ColumnName="SalesQuantityDay" />
+          <ScalarProperty Name="SaleValueDay" ColumnName="SaleValueDay" />
+          <ScalarProperty Name="SalesQuantityWeek" ColumnName="SalesQuantityWeek" />
+          <ScalarProperty Name="SaleValueWeek" ColumnName="SaleValueWeek" />
+          <ScalarProperty Name="SalesQuantityMonth" ColumnName="SalesQuantityMonth" />
+          <ScalarProperty Name="SaleValueMonth" ColumnName="SaleValueMonth" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SalesReportGroup" FunctionName="BOPModel.Store.sp_SalesReportGroup" />
+    <FunctionImportMapping FunctionImportName="sp_SearchSales" FunctionName="BOPModel.Store.sp_SearchSales">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_SearchSales_Result">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="enti_description" ColumnName="enti_description" />
+          <ScalarProperty Name="country_name" ColumnName="country_name" />
+          <ScalarProperty Name="sales_id" ColumnName="sales_id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ServicesXApp" FunctionName="BOPModel.Store.sp_ServicesXApp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_ServicesXApp_Result">
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ServicesXUser" FunctionName="BOPModel.Store.sp_ServicesXUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_ServicesXUser_Result">
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_setSale_Bus" FunctionName="BOPModel.Store.sp_setSale_Bus" />
+    <FunctionImportMapping FunctionImportName="sp_Suspension" FunctionName="BOPModel.Store.sp_Suspension" />
+    <FunctionImportMapping FunctionImportName="sp_SuspensionDesactivation" FunctionName="BOPModel.Store.sp_SuspensionDesactivation" />
+    <FunctionImportMapping FunctionImportName="sp_TokenUser" FunctionName="BOPModel.Store.sp_TokenUser" />
+    <FunctionImportMapping FunctionImportName="sp_updateCommission" FunctionName="BOPModel.Store.sp_updateCommission" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateImgUserInformation" FunctionName="BOPModel.Store.sp_UpdateImgUserInformation" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateProfilePicture" FunctionName="BOPModel.Store.sp_UpdateProfilePicture" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateUserAddressXUser" FunctionName="BOPModel.Store.sp_UpdateUserAddressXUser" />
+    <FunctionImportMapping FunctionImportName="sp_UpdateUserInformation" FunctionName="BOPModel.Store.sp_UpdateUserInformation" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="BOPModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="sp_UserActivation" FunctionName="BOPModel.Store.sp_UserActivation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_UserActivation_Result">
+          <ScalarProperty Name="UserCellPhone" ColumnName="UserCellPhone" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+          <ScalarProperty Name="ValidUntil" ColumnName="ValidUntil" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_CreateTicket1" FunctionName="BOPModel.Store.sp_CreateTicket1" />
+    <FunctionImportMapping FunctionImportName="sp_GetChannelTicket" FunctionName="BOPModel.Store.sp_GetChannelTicket">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetChannelTicket_Result">
+          <ScalarProperty Name="channel_id" ColumnName="channel_id" />
+          <ScalarProperty Name="channel_description" ColumnName="channel_description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetPriorityTicket" FunctionName="BOPModel.Store.sp_GetPriorityTicket">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetPriorityTicket_Result">
+          <ScalarProperty Name="prioritytick_id" ColumnName="prioritytick_id" />
+          <ScalarProperty Name="prioritytick_description" ColumnName="prioritytick_description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetSubjectTicket" FunctionName="BOPModel.Store.sp_GetSubjectTicket">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetSubjectTicket_Result">
+          <ScalarProperty Name="subjtick_id" ColumnName="subjtick_id" />
+          <ScalarProperty Name="subjtick_description" ColumnName="subjtick_description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetTypeTicket" FunctionName="BOPModel.Store.sp_GetTypeTicket">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BOPModel.sp_GetTypeTicket_Result">
+          <ScalarProperty Name="typetick_id" ColumnName="typetick_id" />
+          <ScalarProperty Name="typetick_description" ColumnName="typetick_description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

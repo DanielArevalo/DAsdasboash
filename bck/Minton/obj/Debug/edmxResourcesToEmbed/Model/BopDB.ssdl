@@ -1,0 +1,2718 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BOPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AddressXUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUser" Type="nvarchar" MaxLength="128" />
+    <Property Name="Label" Type="varchar" MaxLength="100" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="None" Type="varchar" MaxLength="100" />
+    <Property Name="Latitude" Type="varchar" MaxLength="100" />
+    <Property Name="Longitude" Type="varchar" MaxLength="100" />
+    <Property Name="Country" Type="varchar" MaxLength="100" />
+    <Property Name="State" Type="varchar" MaxLength="100" />
+    <Property Name="City" Type="varchar" MaxLength="100" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AllSalesMainCustomer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdSale" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerId" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerFirstName" Type="varchar" MaxLength="100" />
+    <Property Name="CustomerLastName" Type="varchar" MaxLength="100" />
+    <Property Name="CustomerBirthday" Type="datetime" />
+    <Property Name="CustomerEmail" Type="varchar" MaxLength="100" />
+    <Property Name="CustomerCellphone" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerGender" Type="varchar" MaxLength="20" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="StatesId" Type="varchar" MaxLength="50" />
+    <Property Name="CityId" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerZipCode" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerStreet" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerPlateNumber" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerComplement" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerNameMother" Type="varchar" MaxLength="100" />
+    <Property Name="PlanId" Type="int" />
+    <Property Name="PaymentType" Type="int" />
+    <Property Name="SellerCode" Type="varchar" MaxLength="50" />
+    <Property Name="BuyerName" Type="varchar" MaxLength="100" />
+    <Property Name="BuyerCellPhone" Type="varchar" MaxLength="50" />
+    <Property Name="BuyerEmail" Type="varchar" MaxLength="100" />
+    <Property Name="CompanySaleId" Type="varchar" MaxLength="100" />
+    <Property Name="Mainly" Type="int" />
+    <Property Name="MainlyId" Type="varchar" MaxLength="50" />
+    <Property Name="url" Type="varchar" MaxLength="250" />
+    <Property Name="Bus" Type="int" />
+    <Property Name="IdSaleMainly" Type="varchar" MaxLength="50" />
+    <Property Name="SaleDate" Type="datetime" />
+    <Property Name="SaleDate2" Type="date" />
+    <Property Name="BeginingDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AppContract">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="AppCode" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="application_area">
+    <Key>
+      <PropertyRef Name="apparea_id" />
+    </Key>
+    <Property Name="apparea_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="apparea_description" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="appoiment">
+    <Key>
+      <PropertyRef Name="appo_id" />
+    </Key>
+    <Property Name="appo_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="appo_date" Type="datetime" Nullable="false" />
+    <Property Name="appo_usercreation" Type="int" Nullable="false" />
+    <Property Name="sales_id" Type="int" Nullable="false" />
+    <Property Name="uprov_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="apps">
+    <Key>
+      <PropertyRef Name="app_id" />
+    </Key>
+    <Property Name="app_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="app_name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AppXUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAppContract" Type="int" />
+    <Property Name="IdUser" Type="nvarchar" MaxLength="128" />
+    <Property Name="idProd" Type="int" />
+  </EntityType>
+  <EntityType Name="ar">
+    <Key>
+      <PropertyRef Name="LangDescr_id" />
+    </Key>
+    <Property Name="LangDescr_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Lang_Key" Type="nvarchar" MaxLength="1500" Nullable="false" />
+    <Property Name="Lang_Translation" Type="nvarchar" MaxLength="1500" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BOP.dbo.borrar_users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="borrar_users">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="user_firstname" />
+      <PropertyRef Name="user_lastname" />
+      <PropertyRef Name="user_icardtitular" />
+      <PropertyRef Name="user_uc" />
+      <PropertyRef Name="status_id" />
+      <PropertyRef Name="user_email" />
+      <PropertyRef Name="user_password" />
+      <PropertyRef Name="user_password_changed" />
+      <PropertyRef Name="user_last_activity" />
+      <PropertyRef Name="user_lang" />
+    </Key>
+    <Property Name="user_id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="user_icard" Type="varchar" MaxLength="50" />
+    <Property Name="user_firstname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="user_lastname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="user_icardtitular" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="user_uc" Type="int" Nullable="false" />
+    <Property Name="status_id" Type="int" Nullable="false" />
+    <Property Name="user_email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="user_password" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="user_password_changed" Type="bit" Nullable="false" />
+    <Property Name="user_last_activity" Type="datetime" Nullable="false" />
+    <Property Name="user_lang" Type="int" Nullable="false" />
+    <Property Name="user_sellerCode" Type="nvarchar" MaxLength="100" />
+    <Property Name="user_birthdate" Type="datetime" />
+    <Property Name="user_gender" Type="varchar" MaxLength="50" />
+    <Property Name="user_cellphone" Type="varchar" MaxLength="50" />
+    <Property Name="user_address" Type="varchar" MaxLength="100" />
+    <Property Name="country_id" Type="int" />
+    <Property Name="user_urlimg" Type="nvarchar" MaxLength="250" />
+    <Property Name="CarNumber" Type="varchar" MaxLength="50" />
+    <Property Name="user_creation" Type="datetime" />
+  </EntityType>
+  <EntityType Name="cards">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="number" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="status" Type="int" />
+    <Property Name="pass" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="characteristic_treatment">
+    <Key>
+      <PropertyRef Name="chatreat_id" />
+    </Key>
+    <Property Name="chatreat_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chatreat_description" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="apparea_id" Type="int" Nullable="false" />
+    <Property Name="speci_id" Type="int" Nullable="false" />
+    <Property Name="tooth_id" Type="int" Nullable="false" />
+    <Property Name="treat_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="city">
+    <Key>
+      <PropertyRef Name="city_id" />
+    </Key>
+    <Property Name="city_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="city_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="states_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="claims">
+    <Key>
+      <PropertyRef Name="claim_id" />
+    </Key>
+    <Property Name="claim_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="claim_treatcomplex" Type="float" Nullable="false" />
+    <Property Name="claim_provucfactor" Type="float" Nullable="false" />
+    <Property Name="claim_utreatcovalue" Type="float" Nullable="false" />
+    <Property Name="claim_portrecoverage" Type="int" Nullable="false" />
+    <Property Name="claim_creationdate" Type="datetime" Nullable="false" />
+    <Property Name="claim_basevalue" Type="float" Nullable="false" />
+    <Property Name="claim_uservalue" Type="float" Nullable="false" />
+    <Property Name="claim_tpavalue" Type="float" Nullable="false" />
+    <Property Name="treat_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="collections">
+    <Key>
+      <PropertyRef Name="colle_id" />
+    </Key>
+    <Property Name="colle_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="colle_periodpayment" Type="int" Nullable="false" />
+    <Property Name="calle_value" Type="float" Nullable="false" />
+    <Property Name="invo_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="commission">
+    <Key>
+      <PropertyRef Name="comi_id" />
+    </Key>
+    <Property Name="comi_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="comi_participation" Type="float" Nullable="false" />
+    <Property Name="typepartici_id" Type="int" Nullable="false" />
+    <Property Name="contractprod_id" Type="int" Nullable="false" />
+    <Property Name="groupenti_id" Type="int" Nullable="false" />
+    <Property Name="role_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CommissionForSale">
+    <Key>
+      <PropertyRef Name="commisale_id" />
+    </Key>
+    <Property Name="commisale_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sales_id" Type="int" />
+    <Property Name="commisale_level1" Type="float" />
+    <Property Name="commisale_level2" Type="float" />
+    <Property Name="commisale_level3" Type="float" />
+    <Property Name="commisale_level4" Type="float" />
+  </EntityType>
+  <EntityType Name="configurationXcontractXproducts">
+    <Key>
+      <PropertyRef Name="confcontractprod_id" />
+    </Key>
+    <Property Name="confcontractprod_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="contractprod_id" Type="int" Nullable="false" />
+    <Property Name="confcontractprod_value" Type="float" Nullable="false" />
+    <Property Name="curren_id" Type="int" Nullable="false" />
+    <Property Name="info_id" Type="int" Nullable="false" />
+    <Property Name="vtime_id" Type="int" Nullable="false" />
+    <Property Name="ppay_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="contract">
+    <Key>
+      <PropertyRef Name="contract_id" />
+    </Key>
+    <Property Name="contract_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="contract_description" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IdAppContract" Type="int" />
+  </EntityType>
+  <EntityType Name="contractXproducts">
+    <Key>
+      <PropertyRef Name="contractprod_id" />
+    </Key>
+    <Property Name="contractprod_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="contractprod_wp" Type="int" Nullable="false" />
+    <Property Name="contractprod_recurrent" Type="int" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="contract_id" Type="int" Nullable="false" />
+    <Property Name="contractprod_participation" Type="float" />
+    <Property Name="contractprod_idfather" Type="int" />
+    <Property Name="typepartici_id" Type="int" />
+  </EntityType>
+  <EntityType Name="country">
+    <Key>
+      <PropertyRef Name="country_id" />
+    </Key>
+    <Property Name="country_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="country_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="country_continent" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="country_nameNative" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="currency">
+    <Key>
+      <PropertyRef Name="curren_id" />
+    </Key>
+    <Property Name="curren_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="curren_description" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="de">
+    <Key>
+      <PropertyRef Name="LangDescr_id" />
+    </Key>
+    <Property Name="LangDescr_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Lang_Key" Type="nvarchar" MaxLength="1500" Nullable="false" />
+    <Property Name="Lang_Translation" Type="nvarchar" MaxLength="1500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="en">
+    <Key>
+      <PropertyRef Name="LangDescr_id" />
+    </Key>
+    <Property Name="LangDescr_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Lang_Key" Type="nvarchar" MaxLength="1500" Nullable="false" />
+    <Property Name="Lang_Translation" Type="nvarchar" MaxLength="1500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="entity">
+    <Key>
+      <PropertyRef Name="enti_id" />
+    </Key>
+    <Property Name="enti_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="enti_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="enti_nit" Type="varchar" MaxLength="50" />
+    <Property Name="enti_latitud" Type="float" Nullable="false" />
+    <Property Name="enti_longitud" Type="float" Nullable="false" />
+    <Property Name="entype_id" Type="int" Nullable="false" />
+    <Property Name="neig_id" Type="int" Nullable="false" />
+    <Property Name="country_id" Type="int" Nullable="false" />
+    <Property Name="status_id" Type="int" Nullable="false" />
+    <Property Name="enti_entifather" Type="int" />
+    <Property Name="enti_description" Type="varchar" MaxLength="1000" />
+    <Property Name="enti_logo" Type="varchar" MaxLength="100" />
+    <Property Name="enti_background" Type="varchar" MaxLength="100" />
+    <Property Name="enti_maincolor" Type="varchar" MaxLength="100" />
+    <Property Name="enti_seccolor" Type="varchar" MaxLength="100" />
+    <Property Name="enti_url" Type="varchar" MaxLength="100" />
+    <Property Name="enti_favicon" Type="varchar" MaxLength="100" />
+    <Property Name="enti_EmailHolder" Type="varchar" MaxLength="50" />
+    <Property Name="enti_EmailCopies" Type="varchar(max)" />
+    <Property Name="enti_SalesEmail" Type="varchar" MaxLength="50" />
+    <Property Name="enti_User" Type="nvarchar" MaxLength="50" />
+    <Property Name="enti_Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="enti_PublicKey" Type="varchar" MaxLength="100" />
+    <Property Name="enti_PrivateKey" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="entitycontract">
+    <Key>
+      <PropertyRef Name="enticontra_id" />
+    </Key>
+    <Property Name="enticontra_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="contract_id" Type="int" Nullable="false" />
+    <Property Name="enti_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="entitytype">
+    <Key>
+      <PropertyRef Name="entype_id" />
+    </Key>
+    <Property Name="entype_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="entype_description" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="es">
+    <Key>
+      <PropertyRef Name="LangDescr_id" />
+    </Key>
+    <Property Name="LangDescr_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Lang_Key" Type="nvarchar" MaxLength="1500" Nullable="false" />
+    <Property Name="Lang_Translation" Type="nvarchar" MaxLength="1500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Excepciones">
+    <Key>
+      <PropertyRef Name="IdExcepciones" />
+    </Key>
+    <Property Name="IdExcepciones" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ErrorId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Message" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Source" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Language" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="externalUserId">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userIdInternal" Type="nvarchar" MaxLength="128" />
+    <Property Name="userIdExternal" Type="nvarchar" MaxLength="128" />
+    <Property Name="appId" Type="int" />
+  </EntityType>
+  <EntityType Name="fa">
+    <Key>
+      <PropertyRef Name="LangDescr_id" />
+    </Key>
+    <Property Name="LangDescr_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Lang_Key" Type="nvarchar" MaxLength="1500" Nullable="false" />
+    <Property Name="Lang_Translation" Type="nvarchar" MaxLength="1500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="glosas">
+    <Key>
+      <PropertyRef Name="glosa_id" />
+    </Key>
+    <Property Name="glosa_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="glosa_description" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="glosastatusclaims">
+    <Key>
+      <PropertyRef Name="glostacla_id" />
+    </Key>
+    <Property Name="glostacla_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stacla_id" Type="int" Nullable="false" />
+    <Property Name="glosa_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="glosaXtreatments">
+    <Key>
+      <PropertyRef Name="glotreat_id" />
+    </Key>
+    <Property Name="glotreat_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="glotreat_characteristic" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="glosa_id" Type="int" Nullable="false" />
+    <Property Name="treat_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="groupXentity">
+    <Key>
+      <PropertyRef Name="groupenti_id" />
+    </Key>
+    <Property Name="groupenti_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="groupenti_description" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="enti_id" Type="int" Nullable="false" />
+    <Property Name="tview_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="gto">
+    <Key>
+      <PropertyRef Name="gto_id" />
+    </Key>
+    <Property Name="gto_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="gto_usercreation" Type="int" Nullable="false" />
+    <Property Name="contractprod_id" Type="int" Nullable="false" />
+    <Property Name="appo_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="gtoclaims">
+    <Key>
+      <PropertyRef Name="gtocla_id" />
+    </Key>
+    <Property Name="gtocla_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="claim_id" Type="int" Nullable="false" />
+    <Property Name="gto_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="homologacion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_plannuevadb" Type="int" />
+    <Property Name="id_planilotus" Type="int" />
+    <Property Name="serialplan" Type="int" />
+    <Property Name="serialpoliza" Type="int" />
+  </EntityType>
+  <EntityType Name="homologationUpstream">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codeUpstream" Type="nvarchar" MaxLength="100" />
+    <Property Name="idProd" Type="int" />
+    <Property Name="sellerCode" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="impuesto">
+    <Key>
+      <PropertyRef Name="impu_id" />
+    </Key>
+    <Property Name="impu_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="impu_description" Type="varchar" MaxLength="50" />
+    <Property Name="impu_name" Type="varchar" MaxLength="50" />
+    <Property Name="impucoun_value" Type="float" />
+  </EntityType>
+  <EntityType Name="impuestoXcountry">
+    <Key>
+      <PropertyRef Name="impucoun_id" />
+    </Key>
+    <Property Name="impucoun_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="country_id" Type="int" />
+    <Property Name="impu_id" Type="int" />
+    <Property Name="status" Type="bit" />
+  </EntityType>
+  <EntityType Name="InformationAditionalXApp">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idAppContract" Type="int" />
+    <Property Name="Label" Type="varchar" MaxLength="100" />
+    <Property Name="information" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="infoXcontractXprod">
+    <Key>
+      <PropertyRef Name="info_id" />
+    </Key>
+    <Property Name="info_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="info_description" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="info_peoplequantity" Type="int" />
+  </EntityType>
+  <EntityType Name="invoices">
+    <Key>
+      <PropertyRef Name="invo_id" />
+    </Key>
+    <Property Name="invo_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="invo_value" Type="float" Nullable="false" />
+    <Property Name="invo_paidvalue" Type="float" Nullable="false" />
+    <Property Name="invo_balance" Type="float" Nullable="false" />
+    <Property Name="invo_duedate" Type="datetime" Nullable="false" />
+    <Property Name="invo_paiddate" Type="datetime" Nullable="false" />
+    <Property Name="sales_id" Type="int" Nullable="false" />
+    <Property Name="status_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="languages">
+    <Key>
+      <PropertyRef Name="lang_id" />
+    </Key>
+    <Property Name="lang_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="lang_description" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="lang_short" Type="varchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LogWs">
+    <Key>
+      <PropertyRef Name="IdLogWs" />
+    </Key>
+    <Property Name="IdLogWs" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ip" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Url" Type="varchar" MaxLength="100" />
+    <Property Name="Usuario" Type="varchar" MaxLength="200" />
+    <Property Name="Proceso" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="DescripcionProceso" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="menus">
+    <Key>
+      <PropertyRef Name="menu_id" />
+    </Key>
+    <Property Name="menu_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="menu_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="app_id" Type="int" Nullable="false" />
+    <Property Name="menu_action" Type="nvarchar" MaxLength="50" />
+    <Property Name="menu_controller" Type="nvarchar" MaxLength="50" />
+    <Property Name="menu_icon" Type="nvarchar" MaxLength="100" />
+    <Property Name="menu_isparent" Type="bit" Nullable="false" />
+    <Property Name="menu_parentid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="neighborhood">
+    <Key>
+      <PropertyRef Name="neig_id" />
+    </Key>
+    <Property Name="neig_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="neig_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="city_city_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="network">
+    <Key>
+      <PropertyRef Name="network_id" />
+    </Key>
+    <Property Name="network_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="network_description" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="otherproducts">
+    <Key>
+      <PropertyRef Name="oprod_id" />
+    </Key>
+    <Property Name="oprod_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="oprod_description" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="paymentgatewayXentity">
+    <Key>
+      <PropertyRef Name="paygatent_id" />
+    </Key>
+    <Property Name="paygatent_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="paygatent_decription" Type="varchar" MaxLength="100" />
+    <Property Name="enti_id" Type="int" />
+    <Property Name="curren_id" Type="int" />
+  </EntityType>
+  <EntityType Name="paymenttype">
+    <Key>
+      <PropertyRef Name="ptype_id" />
+    </Key>
+    <Property Name="ptype_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ptype_description" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="periodinactivation">
+    <Key>
+      <PropertyRef Name="perinac_id" />
+    </Key>
+    <Property Name="perinac_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="perinac_description" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="perinac_days" Type="int" Nullable="false" />
+    <Property Name="country_id" Type="int" />
+  </EntityType>
+  <EntityType Name="periodpayment">
+    <Key>
+      <PropertyRef Name="ppay_id" />
+    </Key>
+    <Property Name="ppay_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ppay_description" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ppay_time" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="permissionsXmenu">
+    <Key>
+      <PropertyRef Name="permimenu_id" />
+    </Key>
+    <Property Name="permimenu_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="menu_id" Type="int" Nullable="false" />
+    <Property Name="utapp_id" Type="int" />
+  </EntityType>
+  <EntityType Name="products">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_description" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="productsXcountry">
+    <Key>
+      <PropertyRef Name="prodco_id" />
+    </Key>
+    <Property Name="prodco_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="country_id" Type="int" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="productsXotherproducts">
+    <Key>
+      <PropertyRef Name="prodoprod_id" />
+    </Key>
+    <Property Name="prodoprod_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="oprod_id" Type="int" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="productsXtreatments">
+    <Key>
+      <PropertyRef Name="prodtreat_id" />
+    </Key>
+    <Property Name="prodtreat_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="prodtreat_coverage" Type="float" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="treat_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="productXapp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppContractId" Type="int" />
+    <Property Name="ProductId" Type="int" />
+  </EntityType>
+  <EntityType Name="providers">
+    <Key>
+      <PropertyRef Name="prov_id" />
+    </Key>
+    <Property Name="prov_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="prov_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="prov_ucfactor" Type="float" Nullable="false" />
+    <Property Name="tprov_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="providerXcontract">
+    <Key>
+      <PropertyRef Name="provcontra_id" />
+    </Key>
+    <Property Name="provcontra_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="prov_id" Type="int" Nullable="false" />
+    <Property Name="contract_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pt">
+    <Key>
+      <PropertyRef Name="LangDescr_id" />
+    </Key>
+    <Property Name="LangDescr_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Lang_Key" Type="nvarchar" MaxLength="1500" Nullable="false" />
+    <Property Name="Lang_Translation" Type="nvarchar" MaxLength="1500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RandomSaleId">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRandom" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="roles">
+    <Key>
+      <PropertyRef Name="role_id" />
+    </Key>
+    <Property Name="role_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="role_description" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="role_level" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BOP.dbo.rolesXuser' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="rolesXuser">
+    <Key>
+      <PropertyRef Name="roluser_id" />
+      <PropertyRef Name="rol_id" />
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="roluser_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rol_id" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sales">
+    <Key>
+      <PropertyRef Name="sales_id" />
+    </Key>
+    <Property Name="sales_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sales_buyingdate" Type="datetime" Nullable="false" />
+    <Property Name="sales_beginingdate" Type="datetime" Nullable="false" />
+    <Property Name="sales_enddate" Type="datetime" Nullable="false" />
+    <Property Name="sales_sellerid" Type="nvarchar" MaxLength="100" />
+    <Property Name="sales_dateinactivation" Type="datetime" Nullable="false" />
+    <Property Name="user_id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ptype_id" Type="int" Nullable="false" />
+    <Property Name="status_id" Type="int" Nullable="false" />
+    <Property Name="confcontractprod_id" Type="int" />
+    <Property Name="serial_ppac" Type="int" />
+    <Property Name="idsale_lotus" Type="varchar" MaxLength="50" />
+    <Property Name="idsale_mainly" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="services">
+    <Key>
+      <PropertyRef Name="services_id" />
+    </Key>
+    <Property Name="services_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="services_description" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servicesXapp">
+    <Key>
+      <PropertyRef Name="serviapp_id" />
+    </Key>
+    <Property Name="serviapp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="services_id" Type="int" />
+    <Property Name="app_id" Type="int" />
+    <Property Name="network_id" Type="int" />
+  </EntityType>
+  <EntityType Name="servicesXnetwork">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idService" Type="int" />
+    <Property Name="idNetwork" Type="int" />
+  </EntityType>
+  <EntityType Name="servicesXproduct">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idService" Type="int" />
+    <Property Name="idProduct" Type="int" />
+  </EntityType>
+  <EntityType Name="specialty">
+    <Key>
+      <PropertyRef Name="speci_id" />
+    </Key>
+    <Property Name="speci_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="speci_description" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="states">
+    <Key>
+      <PropertyRef Name="states_id" />
+    </Key>
+    <Property Name="states_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="states_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="country_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="status">
+    <Key>
+      <PropertyRef Name="status_id" />
+    </Key>
+    <Property Name="status_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="status_description" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="statusclaims">
+    <Key>
+      <PropertyRef Name="stacla_id" />
+    </Key>
+    <Property Name="stacla_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stacla_datemodify" Type="datetime" Nullable="false" />
+    <Property Name="stacla_usermodify" Type="int" Nullable="false" />
+    <Property Name="stacla_userdentist" Type="int" Nullable="false" />
+    <Property Name="stacla_closedate" Type="datetime" Nullable="false" />
+    <Property Name="claim_id" Type="int" Nullable="false" />
+    <Property Name="status_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="token">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cellPhone" Type="varchar" MaxLength="50" />
+    <Property Name="token" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tooth">
+    <Key>
+      <PropertyRef Name="tooth_id" />
+    </Key>
+    <Property Name="tooth_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tooth_numberTooth" Type="int" Nullable="false" />
+    <Property Name="tooth_description" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="treatments">
+    <Key>
+      <PropertyRef Name="treat_id" />
+    </Key>
+    <Property Name="treat_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="treat_code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="treat_description" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="treat_complex" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="treatmentsXcountry">
+    <Key>
+      <PropertyRef Name="treatco_id" />
+    </Key>
+    <Property Name="treatco_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="treatco_codecountry" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="treatco_description" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="treat_id" Type="int" Nullable="false" />
+    <Property Name="country_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="typeparticipation">
+    <Key>
+      <PropertyRef Name="typepartici_id" />
+    </Key>
+    <Property Name="typepartici_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="typepartici_description" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="typeprovider">
+    <Key>
+      <PropertyRef Name="tprov_id" />
+    </Key>
+    <Property Name="tprov_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tprov_description" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="typeXviews">
+    <Key>
+      <PropertyRef Name="tview_id" />
+    </Key>
+    <Property Name="tview_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tview_description" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="uctreatconuntry">
+    <Key>
+      <PropertyRef Name="utreatco_id" />
+    </Key>
+    <Property Name="utreatco_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="utreatco_value" Type="float" Nullable="false" />
+    <Property Name="utreatco_datefrom" Type="datetime" Nullable="false" />
+    <Property Name="utreatco_dateto" Type="datetime" Nullable="false" />
+    <Property Name="country_id" Type="int" Nullable="false" />
+    <Property Name="curren_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="useraudituc">
+    <Key>
+      <PropertyRef Name="uaudit_id" />
+    </Key>
+    <Property Name="uaudit_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="uaudit_uc" Type="int" Nullable="false" />
+    <Property Name="uaudit_modifydate" Type="datetime" Nullable="false" />
+    <Property Name="user_id" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="user_icard" Type="varchar" MaxLength="50" />
+    <Property Name="user_firstname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="user_lastname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="user_icardtitular" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="user_uc" Type="int" Nullable="false" />
+    <Property Name="status_id" Type="int" Nullable="false" />
+    <Property Name="user_email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="user_password" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="user_password_changed" Type="bit" Nullable="false" />
+    <Property Name="user_last_activity" Type="datetime" Nullable="false" />
+    <Property Name="user_lang" Type="int" Nullable="false" />
+    <Property Name="user_sellerCode" Type="nvarchar" MaxLength="100" />
+    <Property Name="user_birthdate" Type="datetime" />
+    <Property Name="user_gender" Type="varchar" MaxLength="50" />
+    <Property Name="user_cellphone" Type="varchar" MaxLength="50" />
+    <Property Name="user_address" Type="varchar" MaxLength="100" />
+    <Property Name="country_id" Type="int" />
+    <Property Name="user_urlimg" Type="nvarchar" MaxLength="250" />
+    <Property Name="CarNumber" Type="varchar" MaxLength="50" />
+    <Property Name="user_creation" Type="datetime" />
+  </EntityType>
+  <EntityType Name="usersXentity">
+    <Key>
+      <PropertyRef Name="uenti_id" />
+    </Key>
+    <Property Name="uenti_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="enti_id" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="usersXgroup">
+    <Key>
+      <PropertyRef Name="ugroup_id" />
+    </Key>
+    <Property Name="ugroup_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="groupenti_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="usersXprovider">
+    <Key>
+      <PropertyRef Name="uprov_id" />
+    </Key>
+    <Property Name="uprov_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="prov_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="usertypeXapp">
+    <Key>
+      <PropertyRef Name="utapp_id" />
+    </Key>
+    <Property Name="utapp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="utype_id" Type="int" Nullable="false" />
+    <Property Name="app_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="validitytime">
+    <Key>
+      <PropertyRef Name="vtime_id" />
+    </Key>
+    <Property Name="vtime_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vtime_description" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="vtime_days" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="channels">
+    <Key>
+      <PropertyRef Name="channel_id" />
+    </Key>
+    <Property Name="channel_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="channel_description" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="commentaryXticket">
+    <Key>
+      <PropertyRef Name="commentick_id" />
+    </Key>
+    <Property Name="commentick_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tick_id" Type="int" Nullable="false" />
+    <Property Name="commentick_observation" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="commentick_userid" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="vicomment_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="priorityXticket">
+    <Key>
+      <PropertyRef Name="prioritytick_id" />
+    </Key>
+    <Property Name="prioritytick_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="prioritytick_description" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="statusXticket">
+    <Key>
+      <PropertyRef Name="statustick_id" />
+    </Key>
+    <Property Name="statustick_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="statustick_description" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="subjectXticket">
+    <Key>
+      <PropertyRef Name="subjtick_id" />
+    </Key>
+    <Property Name="subjtick_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subjtick_description" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ticket">
+    <Key>
+      <PropertyRef Name="tick_id" />
+    </Key>
+    <Property Name="tick_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="typetick_id" Type="int" Nullable="false" />
+    <Property Name="subjtick_id" Type="int" Nullable="false" />
+    <Property Name="prioritytick_id" Type="int" Nullable="false" />
+    <Property Name="tick_observation" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="tick_userid" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="tick_agenteid" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="tick_responsible" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="chan_id" Type="int" Nullable="false" />
+    <Property Name="statustick_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="typeXticket">
+    <Key>
+      <PropertyRef Name="typetick_id" />
+    </Key>
+    <Property Name="typetick_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="typetick_description" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="visibilityXcommentary">
+    <Key>
+      <PropertyRef Name="vicomment_id" />
+    </Key>
+    <Property Name="vicomment_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vicomment_description" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="appoiment_sales">
+    <End Role="sales" Type="Self.sales" Multiplicity="1" />
+    <End Role="appoiment" Type="Self.appoiment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sales">
+        <PropertyRef Name="sales_id" />
+      </Principal>
+      <Dependent Role="appoiment">
+        <PropertyRef Name="sales_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="appoiment_usersXprovider">
+    <End Role="usersXprovider" Type="Self.usersXprovider" Multiplicity="1" />
+    <End Role="appoiment" Type="Self.appoiment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usersXprovider">
+        <PropertyRef Name="uprov_id" />
+      </Principal>
+      <Dependent Role="appoiment">
+        <PropertyRef Name="uprov_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="characteristic_treatment_application_area">
+    <End Role="application_area" Type="Self.application_area" Multiplicity="1" />
+    <End Role="characteristic_treatment" Type="Self.characteristic_treatment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="application_area">
+        <PropertyRef Name="apparea_id" />
+      </Principal>
+      <Dependent Role="characteristic_treatment">
+        <PropertyRef Name="apparea_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="characteristic_treatment_specialty">
+    <End Role="specialty" Type="Self.specialty" Multiplicity="1" />
+    <End Role="characteristic_treatment" Type="Self.characteristic_treatment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="specialty">
+        <PropertyRef Name="speci_id" />
+      </Principal>
+      <Dependent Role="characteristic_treatment">
+        <PropertyRef Name="speci_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="characteristic_treatment_tooth">
+    <End Role="tooth" Type="Self.tooth" Multiplicity="1" />
+    <End Role="characteristic_treatment" Type="Self.characteristic_treatment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tooth">
+        <PropertyRef Name="tooth_id" />
+      </Principal>
+      <Dependent Role="characteristic_treatment">
+        <PropertyRef Name="tooth_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="characteristic_treatment_treatments">
+    <End Role="treatments" Type="Self.treatments" Multiplicity="1" />
+    <End Role="characteristic_treatment" Type="Self.characteristic_treatment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="treatments">
+        <PropertyRef Name="treat_id" />
+      </Principal>
+      <Dependent Role="characteristic_treatment">
+        <PropertyRef Name="treat_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="city_states">
+    <End Role="states" Type="Self.states" Multiplicity="1" />
+    <End Role="city" Type="Self.city" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="states">
+        <PropertyRef Name="states_id" />
+      </Principal>
+      <Dependent Role="city">
+        <PropertyRef Name="states_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="claims_treatments">
+    <End Role="treatments" Type="Self.treatments" Multiplicity="1" />
+    <End Role="claims" Type="Self.claims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="treatments">
+        <PropertyRef Name="treat_id" />
+      </Principal>
+      <Dependent Role="claims">
+        <PropertyRef Name="treat_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="collections_invoices">
+    <End Role="invoices" Type="Self.invoices" Multiplicity="1" />
+    <End Role="collections" Type="Self.collections" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="invoices">
+        <PropertyRef Name="invo_id" />
+      </Principal>
+      <Dependent Role="collections">
+        <PropertyRef Name="invo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="comissions_contractXproducts">
+    <End Role="contractXproducts" Type="Self.contractXproducts" Multiplicity="1" />
+    <End Role="commission" Type="Self.commission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contractXproducts">
+        <PropertyRef Name="contractprod_id" />
+      </Principal>
+      <Dependent Role="commission">
+        <PropertyRef Name="contractprod_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="comissions_groupXentity">
+    <End Role="groupXentity" Type="Self.groupXentity" Multiplicity="1" />
+    <End Role="commission" Type="Self.commission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="groupXentity">
+        <PropertyRef Name="groupenti_id" />
+      </Principal>
+      <Dependent Role="commission">
+        <PropertyRef Name="groupenti_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="comissions_typeparticipation">
+    <End Role="typeparticipation" Type="Self.typeparticipation" Multiplicity="1" />
+    <End Role="commission" Type="Self.commission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typeparticipation">
+        <PropertyRef Name="typepartici_id" />
+      </Principal>
+      <Dependent Role="commission">
+        <PropertyRef Name="typepartici_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="commission_roles">
+    <End Role="roles" Type="Self.roles" Multiplicity="1" />
+    <End Role="commission" Type="Self.commission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="roles">
+        <PropertyRef Name="role_id" />
+      </Principal>
+      <Dependent Role="commission">
+        <PropertyRef Name="role_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="configurationXcontractXproducts_contractXproducts">
+    <End Role="contractXproducts" Type="Self.contractXproducts" Multiplicity="1" />
+    <End Role="configurationXcontractXproducts" Type="Self.configurationXcontractXproducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contractXproducts">
+        <PropertyRef Name="contractprod_id" />
+      </Principal>
+      <Dependent Role="configurationXcontractXproducts">
+        <PropertyRef Name="contractprod_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="configurationXcontractXproducts_currency">
+    <End Role="currency" Type="Self.currency" Multiplicity="1" />
+    <End Role="configurationXcontractXproducts" Type="Self.configurationXcontractXproducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="currency">
+        <PropertyRef Name="curren_id" />
+      </Principal>
+      <Dependent Role="configurationXcontractXproducts">
+        <PropertyRef Name="curren_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="configurationXcontractXproducts_infoXcontractXprod">
+    <End Role="infoXcontractXprod" Type="Self.infoXcontractXprod" Multiplicity="1" />
+    <End Role="configurationXcontractXproducts" Type="Self.configurationXcontractXproducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="infoXcontractXprod">
+        <PropertyRef Name="info_id" />
+      </Principal>
+      <Dependent Role="configurationXcontractXproducts">
+        <PropertyRef Name="info_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="configurationXcontractXproducts_periodpayment">
+    <End Role="periodpayment" Type="Self.periodpayment" Multiplicity="1" />
+    <End Role="configurationXcontractXproducts" Type="Self.configurationXcontractXproducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="periodpayment">
+        <PropertyRef Name="ppay_id" />
+      </Principal>
+      <Dependent Role="configurationXcontractXproducts">
+        <PropertyRef Name="ppay_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="configurationXcontractXproducts_validitytime">
+    <End Role="validitytime" Type="Self.validitytime" Multiplicity="1" />
+    <End Role="configurationXcontractXproducts" Type="Self.configurationXcontractXproducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="validitytime">
+        <PropertyRef Name="vtime_id" />
+      </Principal>
+      <Dependent Role="configurationXcontractXproducts">
+        <PropertyRef Name="vtime_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="contractXproducts_contract">
+    <End Role="contract" Type="Self.contract" Multiplicity="1" />
+    <End Role="contractXproducts" Type="Self.contractXproducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contract">
+        <PropertyRef Name="contract_id" />
+      </Principal>
+      <Dependent Role="contractXproducts">
+        <PropertyRef Name="contract_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="contractXproducts_products">
+    <End Role="products" Type="Self.products" Multiplicity="1" />
+    <End Role="contractXproducts" Type="Self.contractXproducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="contractXproducts">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="contractXproducts_typeparticipation">
+    <End Role="typeparticipation" Type="Self.typeparticipation" Multiplicity="0..1" />
+    <End Role="contractXproducts" Type="Self.contractXproducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typeparticipation">
+        <PropertyRef Name="typepartici_id" />
+      </Principal>
+      <Dependent Role="contractXproducts">
+        <PropertyRef Name="typepartici_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="entity_country">
+    <End Role="country" Type="Self.country" Multiplicity="1" />
+    <End Role="entity" Type="Self.entity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="country_id" />
+      </Principal>
+      <Dependent Role="entity">
+        <PropertyRef Name="country_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="entity_entitytype">
+    <End Role="entitytype" Type="Self.entitytype" Multiplicity="1" />
+    <End Role="entity" Type="Self.entity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="entitytype">
+        <PropertyRef Name="entype_id" />
+      </Principal>
+      <Dependent Role="entity">
+        <PropertyRef Name="entype_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="entity_neighborhood">
+    <End Role="neighborhood" Type="Self.neighborhood" Multiplicity="1" />
+    <End Role="entity" Type="Self.entity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="neighborhood">
+        <PropertyRef Name="neig_id" />
+      </Principal>
+      <Dependent Role="entity">
+        <PropertyRef Name="neig_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="entity_status">
+    <End Role="status" Type="Self.status" Multiplicity="1" />
+    <End Role="entity" Type="Self.entity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="status">
+        <PropertyRef Name="status_id" />
+      </Principal>
+      <Dependent Role="entity">
+        <PropertyRef Name="status_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="entitycontract_contract">
+    <End Role="contract" Type="Self.contract" Multiplicity="1" />
+    <End Role="entitycontract" Type="Self.entitycontract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contract">
+        <PropertyRef Name="contract_id" />
+      </Principal>
+      <Dependent Role="entitycontract">
+        <PropertyRef Name="contract_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="entitycontract_entity">
+    <End Role="entity" Type="Self.entity" Multiplicity="1" />
+    <End Role="entitycontract" Type="Self.entitycontract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="entity">
+        <PropertyRef Name="enti_id" />
+      </Principal>
+      <Dependent Role="entitycontract">
+        <PropertyRef Name="enti_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AddressXU__IdUse__004002F9">
+    <End Role="users" Type="Self.users" Multiplicity="0..1" />
+    <End Role="AddressXUser" Type="Self.AddressXUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="AddressXUser">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AppXUser__IdAppC__68687968">
+    <End Role="AppContract" Type="Self.AppContract" Multiplicity="0..1" />
+    <End Role="AppXUser" Type="Self.AppXUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppContract">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AppXUser">
+        <PropertyRef Name="IdAppContract" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AppXUser__IdUser__695C9DA1">
+    <End Role="users" Type="Self.users" Multiplicity="0..1" />
+    <End Role="AppXUser" Type="Self.AppXUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="AppXUser">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__commentar__tick___536D5C82">
+    <End Role="ticket" Type="Self.ticket" Multiplicity="1" />
+    <End Role="commentaryXticket" Type="Self.commentaryXticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ticket">
+        <PropertyRef Name="tick_id" />
+      </Principal>
+      <Dependent Role="commentaryXticket">
+        <PropertyRef Name="tick_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__commentar__vicom__546180BB">
+    <End Role="visibilityXcommentary" Type="Self.visibilityXcommentary" Multiplicity="1" />
+    <End Role="commentaryXticket" Type="Self.commentaryXticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="visibilityXcommentary">
+        <PropertyRef Name="vicomment_id" />
+      </Principal>
+      <Dependent Role="commentaryXticket">
+        <PropertyRef Name="vicomment_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Commissio__sales__75F77EB0">
+    <End Role="sales" Type="Self.sales" Multiplicity="0..1" />
+    <End Role="CommissionForSale" Type="Self.CommissionForSale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sales">
+        <PropertyRef Name="sales_id" />
+      </Principal>
+      <Dependent Role="CommissionForSale">
+        <PropertyRef Name="sales_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__contract__IdAppC__658C0CBD">
+    <End Role="AppContract" Type="Self.AppContract" Multiplicity="0..1" />
+    <End Role="contract" Type="Self.contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppContract">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="contract">
+        <PropertyRef Name="IdAppContract" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__impuestoX__count__4CF5691D">
+    <End Role="country" Type="Self.country" Multiplicity="0..1" />
+    <End Role="impuestoXcountry" Type="Self.impuestoXcountry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="country_id" />
+      </Principal>
+      <Dependent Role="impuestoXcountry">
+        <PropertyRef Name="country_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__impuestoX__impu___4DE98D56">
+    <End Role="impuesto" Type="Self.impuesto" Multiplicity="0..1" />
+    <End Role="impuestoXcountry" Type="Self.impuestoXcountry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="impuesto">
+        <PropertyRef Name="impu_id" />
+      </Principal>
+      <Dependent Role="impuestoXcountry">
+        <PropertyRef Name="impu_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Informati__idApp__0B7CAB7B">
+    <End Role="AppContract" Type="Self.AppContract" Multiplicity="0..1" />
+    <End Role="InformationAditionalXApp" Type="Self.InformationAditionalXApp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppContract">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InformationAditionalXApp">
+        <PropertyRef Name="idAppContract" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__paymentga__curre__0EC32C7A">
+    <End Role="currency" Type="Self.currency" Multiplicity="0..1" />
+    <End Role="paymentgatewayXentity" Type="Self.paymentgatewayXentity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="currency">
+        <PropertyRef Name="curren_id" />
+      </Principal>
+      <Dependent Role="paymentgatewayXentity">
+        <PropertyRef Name="curren_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__paymentga__enti___0DCF0841">
+    <End Role="entity" Type="Self.entity" Multiplicity="0..1" />
+    <End Role="paymentgatewayXentity" Type="Self.paymentgatewayXentity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="entity">
+        <PropertyRef Name="enti_id" />
+      </Principal>
+      <Dependent Role="paymentgatewayXentity">
+        <PropertyRef Name="enti_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__productXa__AppCo__031C6FA4">
+    <End Role="AppContract" Type="Self.AppContract" Multiplicity="0..1" />
+    <End Role="productXapp" Type="Self.productXapp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppContract">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="productXapp">
+        <PropertyRef Name="AppContractId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__productXa__Produ__041093DD">
+    <End Role="products" Type="Self.products" Multiplicity="0..1" />
+    <End Role="productXapp" Type="Self.productXapp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="productXapp">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__servicesX__app_i__77AABCF8">
+    <End Role="AppContract" Type="Self.AppContract" Multiplicity="0..1" />
+    <End Role="servicesXapp" Type="Self.servicesXapp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppContract">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="servicesXapp">
+        <PropertyRef Name="app_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__servicesX__idNet__20ACD28B">
+    <End Role="network" Type="Self.network" Multiplicity="0..1" />
+    <End Role="servicesXnetwork" Type="Self.servicesXnetwork" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="network">
+        <PropertyRef Name="network_id" />
+      </Principal>
+      <Dependent Role="servicesXnetwork">
+        <PropertyRef Name="idNetwork" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__servicesX__idPro__1CDC41A7">
+    <End Role="products" Type="Self.products" Multiplicity="0..1" />
+    <End Role="servicesXproduct" Type="Self.servicesXproduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="servicesXproduct">
+        <PropertyRef Name="idProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__servicesX__idSer__1BE81D6E">
+    <End Role="services" Type="Self.services" Multiplicity="0..1" />
+    <End Role="servicesXproduct" Type="Self.servicesXproduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="services">
+        <PropertyRef Name="services_id" />
+      </Principal>
+      <Dependent Role="servicesXproduct">
+        <PropertyRef Name="idService" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__servicesX__idSer__1FB8AE52">
+    <End Role="services" Type="Self.services" Multiplicity="0..1" />
+    <End Role="servicesXnetwork" Type="Self.servicesXnetwork" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="services">
+        <PropertyRef Name="services_id" />
+      </Principal>
+      <Dependent Role="servicesXnetwork">
+        <PropertyRef Name="idService" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__servicesX__netwo__7A8729A3">
+    <End Role="network" Type="Self.network" Multiplicity="0..1" />
+    <End Role="servicesXapp" Type="Self.servicesXapp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="network">
+        <PropertyRef Name="network_id" />
+      </Principal>
+      <Dependent Role="servicesXapp">
+        <PropertyRef Name="network_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__servicesX__servi__76B698BF">
+    <End Role="services" Type="Self.services" Multiplicity="0..1" />
+    <End Role="servicesXapp" Type="Self.servicesXapp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="services">
+        <PropertyRef Name="services_id" />
+      </Principal>
+      <Dependent Role="servicesXapp">
+        <PropertyRef Name="services_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ticket__chan_id__4F9CCB9E">
+    <End Role="channels" Type="Self.channels" Multiplicity="1" />
+    <End Role="ticket" Type="Self.ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="channels">
+        <PropertyRef Name="channel_id" />
+      </Principal>
+      <Dependent Role="ticket">
+        <PropertyRef Name="chan_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ticket__priority__4EA8A765">
+    <End Role="priorityXticket" Type="Self.priorityXticket" Multiplicity="1" />
+    <End Role="ticket" Type="Self.ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="priorityXticket">
+        <PropertyRef Name="prioritytick_id" />
+      </Principal>
+      <Dependent Role="ticket">
+        <PropertyRef Name="prioritytick_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ticket__statusti__5090EFD7">
+    <End Role="statusXticket" Type="Self.statusXticket" Multiplicity="1" />
+    <End Role="ticket" Type="Self.ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="statusXticket">
+        <PropertyRef Name="statustick_id" />
+      </Principal>
+      <Dependent Role="ticket">
+        <PropertyRef Name="statustick_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ticket__subjtick__4DB4832C">
+    <End Role="subjectXticket" Type="Self.subjectXticket" Multiplicity="1" />
+    <End Role="ticket" Type="Self.ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subjectXticket">
+        <PropertyRef Name="subjtick_id" />
+      </Principal>
+      <Dependent Role="ticket">
+        <PropertyRef Name="subjtick_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ticket__typetick__4CC05EF3">
+    <End Role="typeXticket" Type="Self.typeXticket" Multiplicity="1" />
+    <End Role="ticket" Type="Self.ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typeXticket">
+        <PropertyRef Name="typetick_id" />
+      </Principal>
+      <Dependent Role="ticket">
+        <PropertyRef Name="typetick_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_contract_id">
+    <End Role="contract" Type="Self.contract" Multiplicity="1" />
+    <End Role="contractXproducts" Type="Self.contractXproducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contract">
+        <PropertyRef Name="contract_id" />
+      </Principal>
+      <Dependent Role="contractXproducts">
+        <PropertyRef Name="contract_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="glosastatusclaims_glosas">
+    <End Role="glosas" Type="Self.glosas" Multiplicity="1" />
+    <End Role="glosastatusclaims" Type="Self.glosastatusclaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="glosas">
+        <PropertyRef Name="glosa_id" />
+      </Principal>
+      <Dependent Role="glosastatusclaims">
+        <PropertyRef Name="glosa_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="glosastatusclaims_statusclaims">
+    <End Role="statusclaims" Type="Self.statusclaims" Multiplicity="1" />
+    <End Role="glosastatusclaims" Type="Self.glosastatusclaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="statusclaims">
+        <PropertyRef Name="stacla_id" />
+      </Principal>
+      <Dependent Role="glosastatusclaims">
+        <PropertyRef Name="stacla_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="glosaXtreatments_glosas">
+    <End Role="glosas" Type="Self.glosas" Multiplicity="1" />
+    <End Role="glosaXtreatments" Type="Self.glosaXtreatments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="glosas">
+        <PropertyRef Name="glosa_id" />
+      </Principal>
+      <Dependent Role="glosaXtreatments">
+        <PropertyRef Name="glosa_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="glosaXtreatments_treatments">
+    <End Role="treatments" Type="Self.treatments" Multiplicity="1" />
+    <End Role="glosaXtreatments" Type="Self.glosaXtreatments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="treatments">
+        <PropertyRef Name="treat_id" />
+      </Principal>
+      <Dependent Role="glosaXtreatments">
+        <PropertyRef Name="treat_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="gto_appoiment">
+    <End Role="appoiment" Type="Self.appoiment" Multiplicity="1" />
+    <End Role="gto" Type="Self.gto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="appoiment">
+        <PropertyRef Name="appo_id" />
+      </Principal>
+      <Dependent Role="gto">
+        <PropertyRef Name="appo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="gto_contractXproducts">
+    <End Role="contractXproducts" Type="Self.contractXproducts" Multiplicity="1" />
+    <End Role="gto" Type="Self.gto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contractXproducts">
+        <PropertyRef Name="contractprod_id" />
+      </Principal>
+      <Dependent Role="gto">
+        <PropertyRef Name="contractprod_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="gtoclaims_claims">
+    <End Role="claims" Type="Self.claims" Multiplicity="1" />
+    <End Role="gtoclaims" Type="Self.gtoclaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="claims">
+        <PropertyRef Name="claim_id" />
+      </Principal>
+      <Dependent Role="gtoclaims">
+        <PropertyRef Name="claim_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="gtoclaims_gto">
+    <End Role="gto" Type="Self.gto" Multiplicity="1" />
+    <End Role="gtoclaims" Type="Self.gtoclaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="gto">
+        <PropertyRef Name="gto_id" />
+      </Principal>
+      <Dependent Role="gtoclaims">
+        <PropertyRef Name="gto_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="invoices_sales">
+    <End Role="sales" Type="Self.sales" Multiplicity="1" />
+    <End Role="invoices" Type="Self.invoices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sales">
+        <PropertyRef Name="sales_id" />
+      </Principal>
+      <Dependent Role="invoices">
+        <PropertyRef Name="sales_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="invoices_status">
+    <End Role="status" Type="Self.status" Multiplicity="1" />
+    <End Role="invoices" Type="Self.invoices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="status">
+        <PropertyRef Name="status_id" />
+      </Principal>
+      <Dependent Role="invoices">
+        <PropertyRef Name="status_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="lang_users">
+    <End Role="languages" Type="Self.languages" Multiplicity="1" />
+    <End Role="users" Type="Self.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="languages">
+        <PropertyRef Name="lang_id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="user_lang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="menus_apps">
+    <End Role="apps" Type="Self.apps" Multiplicity="1" />
+    <End Role="menus" Type="Self.menus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apps">
+        <PropertyRef Name="app_id" />
+      </Principal>
+      <Dependent Role="menus">
+        <PropertyRef Name="app_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="neighborhood_city">
+    <End Role="city" Type="Self.city" Multiplicity="1" />
+    <End Role="neighborhood" Type="Self.neighborhood" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="city">
+        <PropertyRef Name="city_id" />
+      </Principal>
+      <Dependent Role="neighborhood">
+        <PropertyRef Name="city_city_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="periodinactivation_country">
+    <End Role="country" Type="Self.country" Multiplicity="0..1" />
+    <End Role="periodinactivation" Type="Self.periodinactivation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="country_id" />
+      </Principal>
+      <Dependent Role="periodinactivation">
+        <PropertyRef Name="country_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="permissionsXmenu_menus">
+    <End Role="menus" Type="Self.menus" Multiplicity="1" />
+    <End Role="permissionsXmenu" Type="Self.permissionsXmenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="menus">
+        <PropertyRef Name="menu_id" />
+      </Principal>
+      <Dependent Role="permissionsXmenu">
+        <PropertyRef Name="menu_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="permissionsXmenu_usertypeXapp">
+    <End Role="usertypeXapp" Type="Self.usertypeXapp" Multiplicity="0..1" />
+    <End Role="permissionsXmenu" Type="Self.permissionsXmenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usertypeXapp">
+        <PropertyRef Name="utapp_id" />
+      </Principal>
+      <Dependent Role="permissionsXmenu">
+        <PropertyRef Name="utapp_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="productsXcountry_country">
+    <End Role="country" Type="Self.country" Multiplicity="1" />
+    <End Role="productsXcountry" Type="Self.productsXcountry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="country_id" />
+      </Principal>
+      <Dependent Role="productsXcountry">
+        <PropertyRef Name="country_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="productsXcountry_products">
+    <End Role="products" Type="Self.products" Multiplicity="1" />
+    <End Role="productsXcountry" Type="Self.productsXcountry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="productsXcountry">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="productsXotherProducts_otherproducts">
+    <End Role="otherproducts" Type="Self.otherproducts" Multiplicity="1" />
+    <End Role="productsXotherproducts" Type="Self.productsXotherproducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="otherproducts">
+        <PropertyRef Name="oprod_id" />
+      </Principal>
+      <Dependent Role="productsXotherproducts">
+        <PropertyRef Name="oprod_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="productsXotherProducts_products">
+    <End Role="products" Type="Self.products" Multiplicity="1" />
+    <End Role="productsXotherproducts" Type="Self.productsXotherproducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="productsXotherproducts">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="productsXtreatments_products">
+    <End Role="products" Type="Self.products" Multiplicity="1" />
+    <End Role="productsXtreatments" Type="Self.productsXtreatments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="productsXtreatments">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="productsXtreatments_treatments">
+    <End Role="treatments" Type="Self.treatments" Multiplicity="1" />
+    <End Role="productsXtreatments" Type="Self.productsXtreatments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="treatments">
+        <PropertyRef Name="treat_id" />
+      </Principal>
+      <Dependent Role="productsXtreatments">
+        <PropertyRef Name="treat_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="providers_typeprovider">
+    <End Role="typeprovider" Type="Self.typeprovider" Multiplicity="1" />
+    <End Role="providers" Type="Self.providers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typeprovider">
+        <PropertyRef Name="tprov_id" />
+      </Principal>
+      <Dependent Role="providers">
+        <PropertyRef Name="tprov_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="providerXcontract_contract">
+    <End Role="contract" Type="Self.contract" Multiplicity="1" />
+    <End Role="providerXcontract" Type="Self.providerXcontract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contract">
+        <PropertyRef Name="contract_id" />
+      </Principal>
+      <Dependent Role="providerXcontract">
+        <PropertyRef Name="contract_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="providerXcontract_providers">
+    <End Role="providers" Type="Self.providers" Multiplicity="1" />
+    <End Role="providerXcontract" Type="Self.providerXcontract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="providers">
+        <PropertyRef Name="prov_id" />
+      </Principal>
+      <Dependent Role="providerXcontract">
+        <PropertyRef Name="prov_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="sales_configurationXcontractXproducts">
+    <End Role="configurationXcontractXproducts" Type="Self.configurationXcontractXproducts" Multiplicity="0..1" />
+    <End Role="sales" Type="Self.sales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="configurationXcontractXproducts">
+        <PropertyRef Name="confcontractprod_id" />
+      </Principal>
+      <Dependent Role="sales">
+        <PropertyRef Name="confcontractprod_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="sales_paymenttype">
+    <End Role="paymenttype" Type="Self.paymenttype" Multiplicity="1" />
+    <End Role="sales" Type="Self.sales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="paymenttype">
+        <PropertyRef Name="ptype_id" />
+      </Principal>
+      <Dependent Role="sales">
+        <PropertyRef Name="ptype_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="sales_status">
+    <End Role="status" Type="Self.status" Multiplicity="1" />
+    <End Role="sales" Type="Self.sales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="status">
+        <PropertyRef Name="status_id" />
+      </Principal>
+      <Dependent Role="sales">
+        <PropertyRef Name="status_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="sales_user">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="sales" Type="Self.sales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="sales">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="states_country">
+    <End Role="country" Type="Self.country" Multiplicity="1" />
+    <End Role="states" Type="Self.states" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="country_id" />
+      </Principal>
+      <Dependent Role="states">
+        <PropertyRef Name="country_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="statusclaims_claims">
+    <End Role="claims" Type="Self.claims" Multiplicity="1" />
+    <End Role="statusclaims" Type="Self.statusclaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="claims">
+        <PropertyRef Name="claim_id" />
+      </Principal>
+      <Dependent Role="statusclaims">
+        <PropertyRef Name="claim_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="statusclaims_status">
+    <End Role="status" Type="Self.status" Multiplicity="1" />
+    <End Role="statusclaims" Type="Self.statusclaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="status">
+        <PropertyRef Name="status_id" />
+      </Principal>
+      <Dependent Role="statusclaims">
+        <PropertyRef Name="status_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="treatmentsXcountry_country">
+    <End Role="country" Type="Self.country" Multiplicity="1" />
+    <End Role="treatmentsXcountry" Type="Self.treatmentsXcountry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="country_id" />
+      </Principal>
+      <Dependent Role="treatmentsXcountry">
+        <PropertyRef Name="country_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="treatmentsXcountry_treatments">
+    <End Role="treatments" Type="Self.treatments" Multiplicity="1" />
+    <End Role="treatmentsXcountry" Type="Self.treatmentsXcountry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="treatments">
+        <PropertyRef Name="treat_id" />
+      </Principal>
+      <Dependent Role="treatmentsXcountry">
+        <PropertyRef Name="treat_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="typeXuser_user">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="rolesXuser" Type="Self.rolesXuser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="rolesXuser">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="typeXuser_usertype">
+    <End Role="roles" Type="Self.roles" Multiplicity="1" />
+    <End Role="rolesXuser" Type="Self.rolesXuser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="roles">
+        <PropertyRef Name="role_id" />
+      </Principal>
+      <Dependent Role="rolesXuser">
+        <PropertyRef Name="rol_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="uctreatconuntry_country">
+    <End Role="country" Type="Self.country" Multiplicity="1" />
+    <End Role="uctreatconuntry" Type="Self.uctreatconuntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="country_id" />
+      </Principal>
+      <Dependent Role="uctreatconuntry">
+        <PropertyRef Name="country_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="uctreatconuntry_currency">
+    <End Role="currency" Type="Self.currency" Multiplicity="1" />
+    <End Role="uctreatconuntry" Type="Self.uctreatconuntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="currency">
+        <PropertyRef Name="curren_id" />
+      </Principal>
+      <Dependent Role="uctreatconuntry">
+        <PropertyRef Name="curren_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="user_country">
+    <End Role="country" Type="Self.country" Multiplicity="0..1" />
+    <End Role="users" Type="Self.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="country_id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="country_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="useraudituc_user">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="useraudituc" Type="Self.useraudituc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="useraudituc">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="usersentity_entity">
+    <End Role="entity" Type="Self.entity" Multiplicity="1" />
+    <End Role="usersXentity" Type="Self.usersXentity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="entity">
+        <PropertyRef Name="enti_id" />
+      </Principal>
+      <Dependent Role="usersXentity">
+        <PropertyRef Name="enti_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="usersentity_user">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="usersXentity" Type="Self.usersXentity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="usersXentity">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="usersXgroup_groupXentity">
+    <End Role="groupXentity" Type="Self.groupXentity" Multiplicity="1" />
+    <End Role="usersXgroup" Type="Self.usersXgroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="groupXentity">
+        <PropertyRef Name="groupenti_id" />
+      </Principal>
+      <Dependent Role="usersXgroup">
+        <PropertyRef Name="groupenti_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="usersXprovider_providers">
+    <End Role="providers" Type="Self.providers" Multiplicity="1" />
+    <End Role="usersXprovider" Type="Self.usersXprovider" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="providers">
+        <PropertyRef Name="prov_id" />
+      </Principal>
+      <Dependent Role="usersXprovider">
+        <PropertyRef Name="prov_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="usersXprovider_user">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="usersXprovider" Type="Self.usersXprovider" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="usersXprovider">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="usertypeXapp_apps">
+    <End Role="apps" Type="Self.apps" Multiplicity="1" />
+    <End Role="usertypeXapp" Type="Self.usertypeXapp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apps">
+        <PropertyRef Name="app_id" />
+      </Principal>
+      <Dependent Role="usertypeXapp">
+        <PropertyRef Name="app_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="usertypeXapp_usertype">
+    <End Role="roles" Type="Self.roles" Multiplicity="1" />
+    <End Role="usertypeXapp" Type="Self.usertypeXapp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="roles">
+        <PropertyRef Name="role_id" />
+      </Principal>
+      <Dependent Role="usertypeXapp">
+        <PropertyRef Name="utype_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BOPModelStoreContainer">
+    <EntitySet Name="AddressXUser" EntityType="Self.AddressXUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AllSalesMainCustomer" EntityType="Self.AllSalesMainCustomer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppContract" EntityType="Self.AppContract" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="application_area" EntityType="Self.application_area" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="appoiment" EntityType="Self.appoiment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="apps" EntityType="Self.apps" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppXUser" EntityType="Self.AppXUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ar" EntityType="Self.ar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cards" EntityType="Self.cards" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="characteristic_treatment" EntityType="Self.characteristic_treatment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="city" EntityType="Self.city" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="claims" EntityType="Self.claims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="collections" EntityType="Self.collections" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="commission" EntityType="Self.commission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CommissionForSale" EntityType="Self.CommissionForSale" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="configurationXcontractXproducts" EntityType="Self.configurationXcontractXproducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="contract" EntityType="Self.contract" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="contractXproducts" EntityType="Self.contractXproducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="country" EntityType="Self.country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="currency" EntityType="Self.currency" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="de" EntityType="Self.de" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="en" EntityType="Self.en" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="entity" EntityType="Self.entity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="entitycontract" EntityType="Self.entitycontract" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="entitytype" EntityType="Self.entitytype" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="es" EntityType="Self.es" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Excepciones" EntityType="Self.Excepciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="externalUserId" EntityType="Self.externalUserId" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fa" EntityType="Self.fa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="glosas" EntityType="Self.glosas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="glosastatusclaims" EntityType="Self.glosastatusclaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="glosaXtreatments" EntityType="Self.glosaXtreatments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="groupXentity" EntityType="Self.groupXentity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="gto" EntityType="Self.gto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="gtoclaims" EntityType="Self.gtoclaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="homologacion" EntityType="Self.homologacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="homologationUpstream" EntityType="Self.homologationUpstream" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="impuesto" EntityType="Self.impuesto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="impuestoXcountry" EntityType="Self.impuestoXcountry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InformationAditionalXApp" EntityType="Self.InformationAditionalXApp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="infoXcontractXprod" EntityType="Self.infoXcontractXprod" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="invoices" EntityType="Self.invoices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="languages" EntityType="Self.languages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LogWs" EntityType="Self.LogWs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="menus" EntityType="Self.menus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="neighborhood" EntityType="Self.neighborhood" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="network" EntityType="Self.network" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="otherproducts" EntityType="Self.otherproducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="paymentgatewayXentity" EntityType="Self.paymentgatewayXentity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="paymenttype" EntityType="Self.paymenttype" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="periodinactivation" EntityType="Self.periodinactivation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="periodpayment" EntityType="Self.periodpayment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="permissionsXmenu" EntityType="Self.permissionsXmenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="products" EntityType="Self.products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="productsXcountry" EntityType="Self.productsXcountry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="productsXotherproducts" EntityType="Self.productsXotherproducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="productsXtreatments" EntityType="Self.productsXtreatments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="productXapp" EntityType="Self.productXapp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="providers" EntityType="Self.providers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="providerXcontract" EntityType="Self.providerXcontract" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pt" EntityType="Self.pt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RandomSaleId" EntityType="Self.RandomSaleId" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="roles" EntityType="Self.roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sales" EntityType="Self.sales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="services" EntityType="Self.services" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servicesXapp" EntityType="Self.servicesXapp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servicesXnetwork" EntityType="Self.servicesXnetwork" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servicesXproduct" EntityType="Self.servicesXproduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="specialty" EntityType="Self.specialty" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="states" EntityType="Self.states" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="status" EntityType="Self.status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="statusclaims" EntityType="Self.statusclaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="token" EntityType="Self.token" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tooth" EntityType="Self.tooth" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="treatments" EntityType="Self.treatments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="treatmentsXcountry" EntityType="Self.treatmentsXcountry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="typeparticipation" EntityType="Self.typeparticipation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="typeprovider" EntityType="Self.typeprovider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="typeXviews" EntityType="Self.typeXviews" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="uctreatconuntry" EntityType="Self.uctreatconuntry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="useraudituc" EntityType="Self.useraudituc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usersXentity" EntityType="Self.usersXentity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usersXgroup" EntityType="Self.usersXgroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usersXprovider" EntityType="Self.usersXprovider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usertypeXapp" EntityType="Self.usertypeXapp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="validitytime" EntityType="Self.validitytime" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="channels" EntityType="Self.channels" Schema="tick" store:Type="Tables" />
+    <EntitySet Name="commentaryXticket" EntityType="Self.commentaryXticket" Schema="tick" store:Type="Tables" />
+    <EntitySet Name="priorityXticket" EntityType="Self.priorityXticket" Schema="tick" store:Type="Tables" />
+    <EntitySet Name="statusXticket" EntityType="Self.statusXticket" Schema="tick" store:Type="Tables" />
+    <EntitySet Name="subjectXticket" EntityType="Self.subjectXticket" Schema="tick" store:Type="Tables" />
+    <EntitySet Name="ticket" EntityType="Self.ticket" Schema="tick" store:Type="Tables" />
+    <EntitySet Name="typeXticket" EntityType="Self.typeXticket" Schema="tick" store:Type="Tables" />
+    <EntitySet Name="visibilityXcommentary" EntityType="Self.visibilityXcommentary" Schema="tick" store:Type="Tables" />
+    <EntitySet Name="borrar_users" EntityType="Self.borrar_users" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[borrar_users].[user_id] AS [user_id], 
+[borrar_users].[user_icard] AS [user_icard], 
+[borrar_users].[user_firstname] AS [user_firstname], 
+[borrar_users].[user_lastname] AS [user_lastname], 
+[borrar_users].[user_icardtitular] AS [user_icardtitular], 
+[borrar_users].[user_uc] AS [user_uc], 
+[borrar_users].[status_id] AS [status_id], 
+[borrar_users].[user_email] AS [user_email], 
+[borrar_users].[user_password] AS [user_password], 
+[borrar_users].[user_password_changed] AS [user_password_changed], 
+[borrar_users].[user_last_activity] AS [user_last_activity], 
+[borrar_users].[user_lang] AS [user_lang], 
+[borrar_users].[user_sellerCode] AS [user_sellerCode], 
+[borrar_users].[user_birthdate] AS [user_birthdate], 
+[borrar_users].[user_gender] AS [user_gender], 
+[borrar_users].[user_cellphone] AS [user_cellphone], 
+[borrar_users].[user_address] AS [user_address], 
+[borrar_users].[country_id] AS [country_id], 
+[borrar_users].[user_urlimg] AS [user_urlimg], 
+[borrar_users].[CarNumber] AS [CarNumber], 
+[borrar_users].[user_creation] AS [user_creation]
+FROM [dbo].[borrar_users] AS [borrar_users]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="rolesXuser" EntityType="Self.rolesXuser" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[rolesXuser].[roluser_id] AS [roluser_id], 
+[rolesXuser].[rol_id] AS [rol_id], 
+[rolesXuser].[user_id] AS [user_id]
+FROM [dbo].[rolesXuser] AS [rolesXuser]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="appoiment_sales" Association="Self.appoiment_sales">
+      <End Role="sales" EntitySet="sales" />
+      <End Role="appoiment" EntitySet="appoiment" />
+    </AssociationSet>
+    <AssociationSet Name="appoiment_usersXprovider" Association="Self.appoiment_usersXprovider">
+      <End Role="usersXprovider" EntitySet="usersXprovider" />
+      <End Role="appoiment" EntitySet="appoiment" />
+    </AssociationSet>
+    <AssociationSet Name="characteristic_treatment_application_area" Association="Self.characteristic_treatment_application_area">
+      <End Role="application_area" EntitySet="application_area" />
+      <End Role="characteristic_treatment" EntitySet="characteristic_treatment" />
+    </AssociationSet>
+    <AssociationSet Name="characteristic_treatment_specialty" Association="Self.characteristic_treatment_specialty">
+      <End Role="specialty" EntitySet="specialty" />
+      <End Role="characteristic_treatment" EntitySet="characteristic_treatment" />
+    </AssociationSet>
+    <AssociationSet Name="characteristic_treatment_tooth" Association="Self.characteristic_treatment_tooth">
+      <End Role="tooth" EntitySet="tooth" />
+      <End Role="characteristic_treatment" EntitySet="characteristic_treatment" />
+    </AssociationSet>
+    <AssociationSet Name="characteristic_treatment_treatments" Association="Self.characteristic_treatment_treatments">
+      <End Role="treatments" EntitySet="treatments" />
+      <End Role="characteristic_treatment" EntitySet="characteristic_treatment" />
+    </AssociationSet>
+    <AssociationSet Name="city_states" Association="Self.city_states">
+      <End Role="states" EntitySet="states" />
+      <End Role="city" EntitySet="city" />
+    </AssociationSet>
+    <AssociationSet Name="claims_treatments" Association="Self.claims_treatments">
+      <End Role="treatments" EntitySet="treatments" />
+      <End Role="claims" EntitySet="claims" />
+    </AssociationSet>
+    <AssociationSet Name="collections_invoices" Association="Self.collections_invoices">
+      <End Role="invoices" EntitySet="invoices" />
+      <End Role="collections" EntitySet="collections" />
+    </AssociationSet>
+    <AssociationSet Name="comissions_contractXproducts" Association="Self.comissions_contractXproducts">
+      <End Role="contractXproducts" EntitySet="contractXproducts" />
+      <End Role="commission" EntitySet="commission" />
+    </AssociationSet>
+    <AssociationSet Name="comissions_groupXentity" Association="Self.comissions_groupXentity">
+      <End Role="groupXentity" EntitySet="groupXentity" />
+      <End Role="commission" EntitySet="commission" />
+    </AssociationSet>
+    <AssociationSet Name="comissions_typeparticipation" Association="Self.comissions_typeparticipation">
+      <End Role="typeparticipation" EntitySet="typeparticipation" />
+      <End Role="commission" EntitySet="commission" />
+    </AssociationSet>
+    <AssociationSet Name="commission_roles" Association="Self.commission_roles">
+      <End Role="roles" EntitySet="roles" />
+      <End Role="commission" EntitySet="commission" />
+    </AssociationSet>
+    <AssociationSet Name="configurationXcontractXproducts_contractXproducts" Association="Self.configurationXcontractXproducts_contractXproducts">
+      <End Role="contractXproducts" EntitySet="contractXproducts" />
+      <End Role="configurationXcontractXproducts" EntitySet="configurationXcontractXproducts" />
+    </AssociationSet>
+    <AssociationSet Name="configurationXcontractXproducts_currency" Association="Self.configurationXcontractXproducts_currency">
+      <End Role="currency" EntitySet="currency" />
+      <End Role="configurationXcontractXproducts" EntitySet="configurationXcontractXproducts" />
+    </AssociationSet>
+    <AssociationSet Name="configurationXcontractXproducts_infoXcontractXprod" Association="Self.configurationXcontractXproducts_infoXcontractXprod">
+      <End Role="infoXcontractXprod" EntitySet="infoXcontractXprod" />
+      <End Role="configurationXcontractXproducts" EntitySet="configurationXcontractXproducts" />
+    </AssociationSet>
+    <AssociationSet Name="configurationXcontractXproducts_periodpayment" Association="Self.configurationXcontractXproducts_periodpayment">
+      <End Role="periodpayment" EntitySet="periodpayment" />
+      <End Role="configurationXcontractXproducts" EntitySet="configurationXcontractXproducts" />
+    </AssociationSet>
+    <AssociationSet Name="configurationXcontractXproducts_validitytime" Association="Self.configurationXcontractXproducts_validitytime">
+      <End Role="validitytime" EntitySet="validitytime" />
+      <End Role="configurationXcontractXproducts" EntitySet="configurationXcontractXproducts" />
+    </AssociationSet>
+    <AssociationSet Name="contractXproducts_contract" Association="Self.contractXproducts_contract">
+      <End Role="contract" EntitySet="contract" />
+      <End Role="contractXproducts" EntitySet="contractXproducts" />
+    </AssociationSet>
+    <AssociationSet Name="contractXproducts_products" Association="Self.contractXproducts_products">
+      <End Role="products" EntitySet="products" />
+      <End Role="contractXproducts" EntitySet="contractXproducts" />
+    </AssociationSet>
+    <AssociationSet Name="contractXproducts_typeparticipation" Association="Self.contractXproducts_typeparticipation">
+      <End Role="typeparticipation" EntitySet="typeparticipation" />
+      <End Role="contractXproducts" EntitySet="contractXproducts" />
+    </AssociationSet>
+    <AssociationSet Name="entity_country" Association="Self.entity_country">
+      <End Role="country" EntitySet="country" />
+      <End Role="entity" EntitySet="entity" />
+    </AssociationSet>
+    <AssociationSet Name="entity_entitytype" Association="Self.entity_entitytype">
+      <End Role="entitytype" EntitySet="entitytype" />
+      <End Role="entity" EntitySet="entity" />
+    </AssociationSet>
+    <AssociationSet Name="entity_neighborhood" Association="Self.entity_neighborhood">
+      <End Role="neighborhood" EntitySet="neighborhood" />
+      <End Role="entity" EntitySet="entity" />
+    </AssociationSet>
+    <AssociationSet Name="entity_status" Association="Self.entity_status">
+      <End Role="status" EntitySet="status" />
+      <End Role="entity" EntitySet="entity" />
+    </AssociationSet>
+    <AssociationSet Name="entitycontract_contract" Association="Self.entitycontract_contract">
+      <End Role="contract" EntitySet="contract" />
+      <End Role="entitycontract" EntitySet="entitycontract" />
+    </AssociationSet>
+    <AssociationSet Name="entitycontract_entity" Association="Self.entitycontract_entity">
+      <End Role="entity" EntitySet="entity" />
+      <End Role="entitycontract" EntitySet="entitycontract" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AddressXU__IdUse__004002F9" Association="Self.FK__AddressXU__IdUse__004002F9">
+      <End Role="users" EntitySet="users" />
+      <End Role="AddressXUser" EntitySet="AddressXUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AppXUser__IdAppC__68687968" Association="Self.FK__AppXUser__IdAppC__68687968">
+      <End Role="AppContract" EntitySet="AppContract" />
+      <End Role="AppXUser" EntitySet="AppXUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AppXUser__IdUser__695C9DA1" Association="Self.FK__AppXUser__IdUser__695C9DA1">
+      <End Role="users" EntitySet="users" />
+      <End Role="AppXUser" EntitySet="AppXUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__commentar__tick___536D5C82" Association="Self.FK__commentar__tick___536D5C82">
+      <End Role="ticket" EntitySet="ticket" />
+      <End Role="commentaryXticket" EntitySet="commentaryXticket" />
+    </AssociationSet>
+    <AssociationSet Name="FK__commentar__vicom__546180BB" Association="Self.FK__commentar__vicom__546180BB">
+      <End Role="visibilityXcommentary" EntitySet="visibilityXcommentary" />
+      <End Role="commentaryXticket" EntitySet="commentaryXticket" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Commissio__sales__75F77EB0" Association="Self.FK__Commissio__sales__75F77EB0">
+      <End Role="sales" EntitySet="sales" />
+      <End Role="CommissionForSale" EntitySet="CommissionForSale" />
+    </AssociationSet>
+    <AssociationSet Name="FK__contract__IdAppC__658C0CBD" Association="Self.FK__contract__IdAppC__658C0CBD">
+      <End Role="AppContract" EntitySet="AppContract" />
+      <End Role="contract" EntitySet="contract" />
+    </AssociationSet>
+    <AssociationSet Name="FK__impuestoX__count__4CF5691D" Association="Self.FK__impuestoX__count__4CF5691D">
+      <End Role="country" EntitySet="country" />
+      <End Role="impuestoXcountry" EntitySet="impuestoXcountry" />
+    </AssociationSet>
+    <AssociationSet Name="FK__impuestoX__impu___4DE98D56" Association="Self.FK__impuestoX__impu___4DE98D56">
+      <End Role="impuesto" EntitySet="impuesto" />
+      <End Role="impuestoXcountry" EntitySet="impuestoXcountry" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Informati__idApp__0B7CAB7B" Association="Self.FK__Informati__idApp__0B7CAB7B">
+      <End Role="AppContract" EntitySet="AppContract" />
+      <End Role="InformationAditionalXApp" EntitySet="InformationAditionalXApp" />
+    </AssociationSet>
+    <AssociationSet Name="FK__paymentga__curre__0EC32C7A" Association="Self.FK__paymentga__curre__0EC32C7A">
+      <End Role="currency" EntitySet="currency" />
+      <End Role="paymentgatewayXentity" EntitySet="paymentgatewayXentity" />
+    </AssociationSet>
+    <AssociationSet Name="FK__paymentga__enti___0DCF0841" Association="Self.FK__paymentga__enti___0DCF0841">
+      <End Role="entity" EntitySet="entity" />
+      <End Role="paymentgatewayXentity" EntitySet="paymentgatewayXentity" />
+    </AssociationSet>
+    <AssociationSet Name="FK__productXa__AppCo__031C6FA4" Association="Self.FK__productXa__AppCo__031C6FA4">
+      <End Role="AppContract" EntitySet="AppContract" />
+      <End Role="productXapp" EntitySet="productXapp" />
+    </AssociationSet>
+    <AssociationSet Name="FK__productXa__Produ__041093DD" Association="Self.FK__productXa__Produ__041093DD">
+      <End Role="products" EntitySet="products" />
+      <End Role="productXapp" EntitySet="productXapp" />
+    </AssociationSet>
+    <AssociationSet Name="FK__servicesX__app_i__77AABCF8" Association="Self.FK__servicesX__app_i__77AABCF8">
+      <End Role="AppContract" EntitySet="AppContract" />
+      <End Role="servicesXapp" EntitySet="servicesXapp" />
+    </AssociationSet>
+    <AssociationSet Name="FK__servicesX__idNet__20ACD28B" Association="Self.FK__servicesX__idNet__20ACD28B">
+      <End Role="network" EntitySet="network" />
+      <End Role="servicesXnetwork" EntitySet="servicesXnetwork" />
+    </AssociationSet>
+    <AssociationSet Name="FK__servicesX__idPro__1CDC41A7" Association="Self.FK__servicesX__idPro__1CDC41A7">
+      <End Role="products" EntitySet="products" />
+      <End Role="servicesXproduct" EntitySet="servicesXproduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK__servicesX__idSer__1BE81D6E" Association="Self.FK__servicesX__idSer__1BE81D6E">
+      <End Role="services" EntitySet="services" />
+      <End Role="servicesXproduct" EntitySet="servicesXproduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK__servicesX__idSer__1FB8AE52" Association="Self.FK__servicesX__idSer__1FB8AE52">
+      <End Role="services" EntitySet="services" />
+      <End Role="servicesXnetwork" EntitySet="servicesXnetwork" />
+    </AssociationSet>
+    <AssociationSet Name="FK__servicesX__netwo__7A8729A3" Association="Self.FK__servicesX__netwo__7A8729A3">
+      <End Role="network" EntitySet="network" />
+      <End Role="servicesXapp" EntitySet="servicesXapp" />
+    </AssociationSet>
+    <AssociationSet Name="FK__servicesX__servi__76B698BF" Association="Self.FK__servicesX__servi__76B698BF">
+      <End Role="services" EntitySet="services" />
+      <End Role="servicesXapp" EntitySet="servicesXapp" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ticket__chan_id__4F9CCB9E" Association="Self.FK__ticket__chan_id__4F9CCB9E">
+      <End Role="channels" EntitySet="channels" />
+      <End Role="ticket" EntitySet="ticket" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ticket__priority__4EA8A765" Association="Self.FK__ticket__priority__4EA8A765">
+      <End Role="priorityXticket" EntitySet="priorityXticket" />
+      <End Role="ticket" EntitySet="ticket" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ticket__statusti__5090EFD7" Association="Self.FK__ticket__statusti__5090EFD7">
+      <End Role="statusXticket" EntitySet="statusXticket" />
+      <End Role="ticket" EntitySet="ticket" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ticket__subjtick__4DB4832C" Association="Self.FK__ticket__subjtick__4DB4832C">
+      <End Role="subjectXticket" EntitySet="subjectXticket" />
+      <End Role="ticket" EntitySet="ticket" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ticket__typetick__4CC05EF3" Association="Self.FK__ticket__typetick__4CC05EF3">
+      <End Role="typeXticket" EntitySet="typeXticket" />
+      <End Role="ticket" EntitySet="ticket" />
+    </AssociationSet>
+    <AssociationSet Name="fk_contract_id" Association="Self.fk_contract_id">
+      <End Role="contract" EntitySet="contract" />
+      <End Role="contractXproducts" EntitySet="contractXproducts" />
+    </AssociationSet>
+    <AssociationSet Name="glosastatusclaims_glosas" Association="Self.glosastatusclaims_glosas">
+      <End Role="glosas" EntitySet="glosas" />
+      <End Role="glosastatusclaims" EntitySet="glosastatusclaims" />
+    </AssociationSet>
+    <AssociationSet Name="glosastatusclaims_statusclaims" Association="Self.glosastatusclaims_statusclaims">
+      <End Role="statusclaims" EntitySet="statusclaims" />
+      <End Role="glosastatusclaims" EntitySet="glosastatusclaims" />
+    </AssociationSet>
+    <AssociationSet Name="glosaXtreatments_glosas" Association="Self.glosaXtreatments_glosas">
+      <End Role="glosas" EntitySet="glosas" />
+      <End Role="glosaXtreatments" EntitySet="glosaXtreatments" />
+    </AssociationSet>
+    <AssociationSet Name="glosaXtreatments_treatments" Association="Self.glosaXtreatments_treatments">
+      <End Role="treatments" EntitySet="treatments" />
+      <End Role="glosaXtreatments" EntitySet="glosaXtreatments" />
+    </AssociationSet>
+    <AssociationSet Name="gto_appoiment" Association="Self.gto_appoiment">
+      <End Role="appoiment" EntitySet="appoiment" />
+      <End Role="gto" EntitySet="gto" />
+    </AssociationSet>
+    <AssociationSet Name="gto_contractXproducts" Association="Self.gto_contractXproducts">
+      <End Role="contractXproducts" EntitySet="contractXproducts" />
+      <End Role="gto" EntitySet="gto" />
+    </AssociationSet>
+    <AssociationSet Name="gtoclaims_claims" Association="Self.gtoclaims_claims">
+      <End Role="claims" EntitySet="claims" />
+      <End Role="gtoclaims" EntitySet="gtoclaims" />
+    </AssociationSet>
+    <AssociationSet Name="gtoclaims_gto" Association="Self.gtoclaims_gto">
+      <End Role="gto" EntitySet="gto" />
+      <End Role="gtoclaims" EntitySet="gtoclaims" />
+    </AssociationSet>
+    <AssociationSet Name="invoices_sales" Association="Self.invoices_sales">
+      <End Role="sales" EntitySet="sales" />
+      <End Role="invoices" EntitySet="invoices" />
+    </AssociationSet>
+    <AssociationSet Name="invoices_status" Association="Self.invoices_status">
+      <End Role="status" EntitySet="status" />
+      <End Role="invoices" EntitySet="invoices" />
+    </AssociationSet>
+    <AssociationSet Name="lang_users" Association="Self.lang_users">
+      <End Role="languages" EntitySet="languages" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="menus_apps" Association="Self.menus_apps">
+      <End Role="apps" EntitySet="apps" />
+      <End Role="menus" EntitySet="menus" />
+    </AssociationSet>
+    <AssociationSet Name="neighborhood_city" Association="Self.neighborhood_city">
+      <End Role="city" EntitySet="city" />
+      <End Role="neighborhood" EntitySet="neighborhood" />
+    </AssociationSet>
+    <AssociationSet Name="periodinactivation_country" Association="Self.periodinactivation_country">
+      <End Role="country" EntitySet="country" />
+      <End Role="periodinactivation" EntitySet="periodinactivation" />
+    </AssociationSet>
+    <AssociationSet Name="permissionsXmenu_menus" Association="Self.permissionsXmenu_menus">
+      <End Role="menus" EntitySet="menus" />
+      <End Role="permissionsXmenu" EntitySet="permissionsXmenu" />
+    </AssociationSet>
+    <AssociationSet Name="permissionsXmenu_usertypeXapp" Association="Self.permissionsXmenu_usertypeXapp">
+      <End Role="usertypeXapp" EntitySet="usertypeXapp" />
+      <End Role="permissionsXmenu" EntitySet="permissionsXmenu" />
+    </AssociationSet>
+    <AssociationSet Name="productsXcountry_country" Association="Self.productsXcountry_country">
+      <End Role="country" EntitySet="country" />
+      <End Role="productsXcountry" EntitySet="productsXcountry" />
+    </AssociationSet>
+    <AssociationSet Name="productsXcountry_products" Association="Self.productsXcountry_products">
+      <End Role="products" EntitySet="products" />
+      <End Role="productsXcountry" EntitySet="productsXcountry" />
+    </AssociationSet>
+    <AssociationSet Name="productsXotherProducts_otherproducts" Association="Self.productsXotherProducts_otherproducts">
+      <End Role="otherproducts" EntitySet="otherproducts" />
+      <End Role="productsXotherproducts" EntitySet="productsXotherproducts" />
+    </AssociationSet>
+    <AssociationSet Name="productsXotherProducts_products" Association="Self.productsXotherProducts_products">
+      <End Role="products" EntitySet="products" />
+      <End Role="productsXotherproducts" EntitySet="productsXotherproducts" />
+    </AssociationSet>
+    <AssociationSet Name="productsXtreatments_products" Association="Self.productsXtreatments_products">
+      <End Role="products" EntitySet="products" />
+      <End Role="productsXtreatments" EntitySet="productsXtreatments" />
+    </AssociationSet>
+    <AssociationSet Name="productsXtreatments_treatments" Association="Self.productsXtreatments_treatments">
+      <End Role="treatments" EntitySet="treatments" />
+      <End Role="productsXtreatments" EntitySet="productsXtreatments" />
+    </AssociationSet>
+    <AssociationSet Name="providers_typeprovider" Association="Self.providers_typeprovider">
+      <End Role="typeprovider" EntitySet="typeprovider" />
+      <End Role="providers" EntitySet="providers" />
+    </AssociationSet>
+    <AssociationSet Name="providerXcontract_contract" Association="Self.providerXcontract_contract">
+      <End Role="contract" EntitySet="contract" />
+      <End Role="providerXcontract" EntitySet="providerXcontract" />
+    </AssociationSet>
+    <AssociationSet Name="providerXcontract_providers" Association="Self.providerXcontract_providers">
+      <End Role="providers" EntitySet="providers" />
+      <End Role="providerXcontract" EntitySet="providerXcontract" />
+    </AssociationSet>
+    <AssociationSet Name="sales_configurationXcontractXproducts" Association="Self.sales_configurationXcontractXproducts">
+      <End Role="configurationXcontractXproducts" EntitySet="configurationXcontractXproducts" />
+      <End Role="sales" EntitySet="sales" />
+    </AssociationSet>
+    <AssociationSet Name="sales_paymenttype" Association="Self.sales_paymenttype">
+      <End Role="paymenttype" EntitySet="paymenttype" />
+      <End Role="sales" EntitySet="sales" />
+    </AssociationSet>
+    <AssociationSet Name="sales_status" Association="Self.sales_status">
+      <End Role="status" EntitySet="status" />
+      <End Role="sales" EntitySet="sales" />
+    </AssociationSet>
+    <AssociationSet Name="sales_user" Association="Self.sales_user">
+      <End Role="users" EntitySet="users" />
+      <End Role="sales" EntitySet="sales" />
+    </AssociationSet>
+    <AssociationSet Name="states_country" Association="Self.states_country">
+      <End Role="country" EntitySet="country" />
+      <End Role="states" EntitySet="states" />
+    </AssociationSet>
+    <AssociationSet Name="statusclaims_claims" Association="Self.statusclaims_claims">
+      <End Role="claims" EntitySet="claims" />
+      <End Role="statusclaims" EntitySet="statusclaims" />
+    </AssociationSet>
+    <AssociationSet Name="statusclaims_status" Association="Self.statusclaims_status">
+      <End Role="status" EntitySet="status" />
+      <End Role="statusclaims" EntitySet="statusclaims" />
+    </AssociationSet>
+    <AssociationSet Name="treatmentsXcountry_country" Association="Self.treatmentsXcountry_country">
+      <End Role="country" EntitySet="country" />
+      <End Role="treatmentsXcountry" EntitySet="treatmentsXcountry" />
+    </AssociationSet>
+    <AssociationSet Name="treatmentsXcountry_treatments" Association="Self.treatmentsXcountry_treatments">
+      <End Role="treatments" EntitySet="treatments" />
+      <End Role="treatmentsXcountry" EntitySet="treatmentsXcountry" />
+    </AssociationSet>
+    <AssociationSet Name="typeXuser_user" Association="Self.typeXuser_user">
+      <End Role="users" EntitySet="users" />
+      <End Role="rolesXuser" EntitySet="rolesXuser" />
+    </AssociationSet>
+    <AssociationSet Name="typeXuser_usertype" Association="Self.typeXuser_usertype">
+      <End Role="roles" EntitySet="roles" />
+      <End Role="rolesXuser" EntitySet="rolesXuser" />
+    </AssociationSet>
+    <AssociationSet Name="uctreatconuntry_country" Association="Self.uctreatconuntry_country">
+      <End Role="country" EntitySet="country" />
+      <End Role="uctreatconuntry" EntitySet="uctreatconuntry" />
+    </AssociationSet>
+    <AssociationSet Name="uctreatconuntry_currency" Association="Self.uctreatconuntry_currency">
+      <End Role="currency" EntitySet="currency" />
+      <End Role="uctreatconuntry" EntitySet="uctreatconuntry" />
+    </AssociationSet>
+    <AssociationSet Name="user_country" Association="Self.user_country">
+      <End Role="country" EntitySet="country" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="useraudituc_user" Association="Self.useraudituc_user">
+      <End Role="users" EntitySet="users" />
+      <End Role="useraudituc" EntitySet="useraudituc" />
+    </AssociationSet>
+    <AssociationSet Name="usersentity_entity" Association="Self.usersentity_entity">
+      <End Role="entity" EntitySet="entity" />
+      <End Role="usersXentity" EntitySet="usersXentity" />
+    </AssociationSet>
+    <AssociationSet Name="usersentity_user" Association="Self.usersentity_user">
+      <End Role="users" EntitySet="users" />
+      <End Role="usersXentity" EntitySet="usersXentity" />
+    </AssociationSet>
+    <AssociationSet Name="usersXgroup_groupXentity" Association="Self.usersXgroup_groupXentity">
+      <End Role="groupXentity" EntitySet="groupXentity" />
+      <End Role="usersXgroup" EntitySet="usersXgroup" />
+    </AssociationSet>
+    <AssociationSet Name="usersXprovider_providers" Association="Self.usersXprovider_providers">
+      <End Role="providers" EntitySet="providers" />
+      <End Role="usersXprovider" EntitySet="usersXprovider" />
+    </AssociationSet>
+    <AssociationSet Name="usersXprovider_user" Association="Self.usersXprovider_user">
+      <End Role="users" EntitySet="users" />
+      <End Role="usersXprovider" EntitySet="usersXprovider" />
+    </AssociationSet>
+    <AssociationSet Name="usertypeXapp_apps" Association="Self.usertypeXapp_apps">
+      <End Role="apps" EntitySet="apps" />
+      <End Role="usertypeXapp" EntitySet="usertypeXapp" />
+    </AssociationSet>
+    <AssociationSet Name="usertypeXapp_usertype" Association="Self.usertypeXapp_usertype">
+      <End Role="roles" EntitySet="roles" />
+      <End Role="usertypeXapp" EntitySet="usertypeXapp" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
