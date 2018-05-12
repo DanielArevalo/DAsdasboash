@@ -8,5 +8,6 @@ namespace Milton.Models
     public class Apps
     {
         public string Name { get; set; }
+        public string Id { get; set; }
     }
 }

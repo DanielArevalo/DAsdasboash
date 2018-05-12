@@ -8,11 +8,10 @@ namespace Milton.Models
     public class Tables
     {
         public DateTime Fecha { get; set; }
-        public int Subcripciones { get; set; }
-        public int Regitrados { get; set; }
-        public int Registrados_Con_Pago_Activo { get; set; }
-        public int Daily_Charged { get; set; }
-        public int repeat_Charged { get; set; }
-
+        public int Suscripciones { get; set; }
+        public int Registrados { get; set; }
+        public int registrados_con_pago_activo { get; set; }
+        public int daily_charged { get; set; }
+        public int repeat_charged { get; set; }
     }
 }

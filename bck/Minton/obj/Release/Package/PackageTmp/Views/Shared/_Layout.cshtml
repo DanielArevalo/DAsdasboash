@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="author" content="Coderthemes">
+    <link rel="shortcut icon" href="~/images/favicon.ico">
+
+    <title>BOP Help - Report General</title>
+    @Styles.Render("~/Content/css")
+    <script src="@Url.Content("~/Scripts/modernizr.min.js")"></script>
+
+    @RenderSection("contents", false)
+</head>
+<body class="fixed-left">
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Top Bar Start -->
+        <div class="topbar">
+
+            <!-- LOGO -->
+            <div class="topbar-left" style="background-color: rgba(147, 147, 147, 0.85)">
+                <a href="@Url.Action("Index","Home")" style="background: rgba(147, 147, 147, 0.85)" class="logo">
+                    <img src="~/images/bophelp.png" class="img-responsive" style="height:3pc; margin-left:pc; margin-top:1.5pc; background: rgba(147, 147, 147, 0.85)" />
+                </a>
+            </div>
+
+            <!-- Navbar -->
+            <div class="navbar navbar" role="navigation" style="background-color: rgba(130, 130, 130, 0.85)">
+                <div class="container">
+                    <div class="">
+                        <div class="pull-left">
+                            <button class="button-menu-mobile open-left waves-effect">
+                                <i class="md md-menu"></i>
+                            </button>
+                            <span class="clearfix"></span>
+                        </div>
+
+                        <ul class="nav navbar-nav navbar-right pull-right">
+                            <li class="dropdown hidden-xs">
+                                <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light"
+                                   data-toggle="dropdown" aria-expanded="true">
+                                    <span class="badge badge-xs badge-pink"></span>
+                                </a>
+                            </li>
+                            <li class="hidden-xs" id="s1">
+                                <a href="#" class="right-bar-toggle waves-effect waves-light">
+                                    <i class="md md-settings"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+            <div class="sidebar-inner slimscrollleft">
+                <div id="sidebar-menu">
+                    <ul>
+                        <li>
+                            <a href="@Url.Action("Index", "Home")" class="waves-effect waves-primary">
+                                <i class="ti-home"></i><span style="margin-top:1pc;"> Dashboard </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="content-page">
+            <!-- Start content -->
+            <div class="content">
+                <div class="container">
+                    @RenderBody()
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end content -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Right content here -->
+        <!-- ============================================================== -->
+        <!-- Right Sidebar -->
+        <div class="side-bar right-bar">
+            <div class="nicescroll">
+                <ul class="nav nav-tabs tabs">
+                    <li class="active tab">
+                        <a href="#home-2" data-toggle="tab" aria-expanded="false">
+                            <span class="visible-xs"><i class="fa fa-home"></i></span>
+                            <span class="hidden-xs">Apps BOP</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="home-2">
+                        <div class="time-item">
+                            <div class="item-info" id="s1">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Right-bar -->
+        <!-- END wrapper -->
+
+        <script>
+
+        </script>
+
+        <!-- Plugins  -->
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundle/common")
+
+        @RenderSection("scripts", false)
+</body>
+</html>

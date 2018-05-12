@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Milton.Models;
 
 namespace Milton.Controllers
 {
@@ -16,6 +17,44 @@ namespace Milton.Controllers
         public ActionResult RecoverPassword()
         {
             return View();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(LoginViewModel model, string returnUrl)
+        {
+            System.Web.HttpContext.Current.Session["Session"] = false;
+            ViewBag.LoginError = false;
+            if (!ModelState.IsValid)
+                return View(model);
+
+            if (GetValidUser(model.Email, model.Password))
+            {
+                System.Web.HttpContext.Current.Session["Session"] = true;
+                return RedirectToLocal(returnUrl);
+            }
+
+            ViewBag.LoginError = true;
+            return View(model);
+        }
+
+        private ActionResult RedirectToLocal(string returnUrl)
+        {
+            if (Url.IsLocalUrl(returnUrl))
+                return Redirect(returnUrl);
+            return RedirectToAction("index", "Home");
+        }
+
+        private bool GetValidUser(string username, string password)
+        {
+            switch (username)
+            {
+                case "ricardo.ariza@bophelp.com":
+                    return password.Equals("Bop123*");
+                default:
+                    return false;
+            }
         }
     }
 }

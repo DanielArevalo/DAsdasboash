@@ -15,7 +15,5 @@ namespace Milton.Models
         public string Celular { get; set; }
         public string Tarjeta { get; set; }
         public string Id_Usuario { get; set; }
-
-
     }
 }

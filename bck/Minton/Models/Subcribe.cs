@@ -7,7 +7,7 @@ namespace Milton.Models
 {
     public class Subcribe
     {
-        public int Fecha_ini { get; set; }
-        public int Cantidad { get; set; }
+        public string Codigo_App { get; set; }
+        public int cantidad { get; set; }
     }
 }

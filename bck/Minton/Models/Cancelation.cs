@@ -10,4 +10,10 @@ namespace Milton.Models
         public string Fecha_ini { get; set; }
         public int Cantidad { get; set; }
     }
+
+    public class Charged
+    {
+        public string Fecha_ini { get; set; }
+        public int Cantidad { get; set; }
+    }
 }
