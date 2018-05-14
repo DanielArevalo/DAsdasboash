@@ -7,8 +7,9 @@
 
 @section contents{
     <link href="~/Scripts/plugins/morris/morris.css" rel="stylesheet">
+    <link href="~/Scripts/plugins/morris/morris.css" rel="stylesheet">
     <link href="~/Scripts/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
-    <link href="~/Scripts/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="~/Scripts/plugins/chartist/dist/chartist.min.css" rel="stylesheet">
 }
 
 <div class="row">
@@ -104,7 +105,7 @@
         <div class="card-box">
             <h4 class="text-dark  header-title m-t-0 m-b-30" id="titleCpMetrics">Metrics</h4>
             <div class="widget-chart text-center">
-                <div id="dashboard-chart-1" style="height: 200px;"></div>
+                <div id="simple-line-chart" style="height: 200px;"></div>
             </div>
         </div>
     </div>
@@ -112,13 +113,15 @@
         <div class="card-box">
             <h4 class="text-dark  header-title m-t-0 m-b-30">Subscribers by Company</h4>
             <div class="widget-chart text-center">
-                <div id="morris-donut-example" style="height: 200px;"></div>
+                <div id="morris-donut-example" style="height: 200px;">
+                    <svg style="height: 200px; width: 100%" class="nvd3-svg"> </svg>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <div class="row">
-    <div class="col-lg-8">
+    <div class="col-lg-12">
         <div class="card-box">
             <h4 class="text-dark  header-title m-t-0">Metrics Detail</h4>
             <div class="table-responsive">
@@ -143,9 +146,13 @@
 </div>
 <!-- end row -->
 @section scripts{
+    <script src="@Url.Content("~/Scripts/plugins/moment/moment.js")"></script>
+    <link href="~/Scripts/plugins/datatables/fixedHeader.bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/Scripts/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/Scripts/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
     <script src="@Url.Content("~/Scripts/plugins/d3/d3.min.js")"></script>
     <script src="@Url.Content("~/Scripts/plugins/nvd3/build/nv.d3.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/plugins/datatables/dataTables.scroller.min.js")"></script>
     <script src="@Url.Content("~/Scripts/plugins/datatables/jquery.dataTables.min.js")"></script>
     <script src="@Url.Content("~/Scripts/plugins/datatables/dataTables.bootstrap.js")"></script>
     <script src="@Url.Content("~/Scripts/plugins/datatables/dataTables.buttons.min.js")"></script>
@@ -160,16 +167,7 @@
     <script src="@Url.Content("~/Scripts/plugins/datatables/dataTables.responsive.min.js")"></script>
     <script src="@Url.Content("~/Scripts/plugins/datatables/responsive.bootstrap.min.js")"></script>
     <script src="@Url.Content("~/Scripts/plugins/datatables/dataTables.scroller.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/plugins/moment/moment.js")"></script>
-
-    <link href="~/Scripts/plugins/datatables/fixedHeader.bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Scripts/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="~/Scripts/plugins/datatables/responsive.bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Scripts/plugins/datatables/scroller.bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Scripts/plugins/datatables/buttons.bootstrap.min.css" rel="stylesheet" />
-    <script src="~/Scripts/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-    <script src="~/Scripts/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-    <script src="~/Scripts/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="@Url.Content("~/Scripts/plugins/chartist/dist/chartist.min.js")"></script>
 
     <script type="text/javascript">
         $(document).ready(
@@ -203,7 +201,7 @@
                     if (data.ReportGeneral.length > 0) {
                         var tbOne = $("#financialReport");
                         var columns = [
-                            { data: 'Fecha', className: "left" },
+                            { data: 'Date', className: "left" },
                             { data: 'Suscripciones', className: "center" },
                             { data: 'Registrados', className: "center" },
                             { data: 'registrados_con_pago_activo', className: "center" },
@@ -224,7 +222,51 @@
                             responsive: !0
                         });
                     }
-                    debugger;
+                    //Graph Pie
+                    nv.addGraph(function () {
+                        var chart = nv.models.pieChart()
+                            .x(function (d) { return d.label })
+                            .y(function (d) { return d.value })
+                            .showLabels(true);
+                        d3.select("#morris-donut-example svg")
+                            .datum(ConvertToData(data.CompaniesMetrics))
+                            .transition().duration(1200)
+                            .call(chart);
+
+                        return chart;
+                    });
+
+                    //Graph Line
+                    var labels = [];
+                    var series = [];
+                    for (var i = 0; i < data.ValuesPerMonth.length; i++) {
+                        var val = data.ValuesPerMonth[i];
+                        labels.push(val.MonthName);
+                    }
+                    var arr = [];
+                    for (var i = 0; i < data.ValuesPerMonth.length; i++) {
+                        var val = data.ValuesPerMonth[i];
+                        arr.push(val.Activation);
+                    }
+                    series.push(arr);
+                    arr = [];
+                    for (var i = 0; i < data.ValuesPerMonth.length; i++) {
+                        var val = data.ValuesPerMonth[i];
+                        arr.push(val.Cancellation);
+                    }
+                    series.push(arr);
+                    arr = [];
+                    for (var i = 0; i < data.ValuesPerMonth.length; i++) {
+                        var val = data.ValuesPerMonth[i];
+                        arr.push(val.Subscription);
+                    }
+                    series.push(arr);
+                    new Chartist.Line('#simple-line-chart', {
+                        labels: labels,
+                        series: series
+                    }, {
+                        fullWidth: true
+                    });
                 },
                 error: function (xhr) {
                     debugger;
@@ -234,30 +276,24 @@
                 contentType: "application/json; charset=utf-8"
             });
             var getColor = function (type) {
-                var color;
-                switch (type) {
-                    case 1:
-                        color = generateColor();
-                        if (!repColorsOne.includes(color)) {
-                            repColorsOne.push(color);
-                            return color;
-                        }
-                        getColor(1);
-                        break;
-                    case 2:
-                        color = generateColor();
-                        if (!repColorsTwo.includes(color)) {
-                            repColorsTwo.push(color);
-                            return color;
-                        }
-                        getColor(2);
-                        break;
-                }
-                return '#000000';
+                var color = generateColor();
+                return color;
             }
             var generateColor = function () {
                 return "#" + Math.floor(Math.random() * 16777215).toString(16);
             }
+            function ConvertToData(info) {
+                var rtn = [];
+                $.each(info, function (i, j) {
+                    rtn.push({
+                        "label": j.Name,
+                        "value": j.Value,
+                        "color": getColor()
+                    });
+                });
+                return rtn;
+            }
+
         }
     </script>
 }

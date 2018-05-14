@@ -59,6 +59,8 @@ namespace Milton.Controllers
                         Value = rpt.Select(x => x.Suscripciones).Sum(a => a).ToString()
                     });
                 }
+
+                foreach (var report in rtn.ReportGeneral) report.Date = report.Fecha.ToString("yyyy/MM/dd");
             }
             catch (Exception)
             {

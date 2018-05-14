@@ -13,5 +13,6 @@ namespace Milton.Models
         public int registrados_con_pago_activo { get; set; }
         public int daily_charged { get; set; }
         public int repeat_charged { get; set; }
+        public string Date { get; set; }
     }
 }
