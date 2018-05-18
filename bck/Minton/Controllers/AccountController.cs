@@ -50,7 +50,16 @@ namespace Milton.Controllers
         {
             switch (username)
             {
-                case "ricardo.ariza@bophelp.com":
+                case
+                    "ricardo.ariza@bophelp.com":
+                    return password.Equals("Bop123*");
+                case "Fabiola.franco@bophelp.com":
+                    return password.Equals("Bop123*");
+                case "salvador.dacunha@bophelp.com":
+                    return password.Equals("Bop123*");
+                case "Thais.loureiro@bophelp.com":
+                    return password.Equals("Bop123*");
+                case "Omar.moreno@bophelp.com":
                     return password.Equals("Bop123*");
                 default:
                     return false;

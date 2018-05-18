@@ -1127,7 +1127,7 @@ pre {
   background-color: rgba(0, 150, 136, 0.7);
 }
 .waves-effect.waves-primary .waves-ripple {
-  background-color: rgba(3, 156, 253, 0.4);
+  background-color:;
 }
 .waves-notransition {
   -webkit-transition: none !important;

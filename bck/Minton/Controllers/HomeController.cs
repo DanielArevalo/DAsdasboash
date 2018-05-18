@@ -38,10 +38,13 @@ namespace Milton.Controllers
                 query = "exec sp_info_dashboard '" + appId + "', '" + initial + "'";
                 rtn.ReportGeneral = _db.Database.SqlQuery<Tables>(query).ToList();
                 rtn.ReportGeneral = rtn.ReportGeneral.Where(x => DateTime.Compare(x.Fecha, Convert.ToDateTime(ending)) <= 0).ToList();
-                rtn.SubcribedUsers = rtn.ReportGeneral.Select(x => x.Suscripciones).Sum(a => a);
-                rtn.Charged = rtn.ReportGeneral.Select(x => x.registrados_con_pago_activo).Sum(a => a);
+                var sr = rtn.ReportGeneral.Select(x => x.Suscripciones).Sum(a => a);
+                rtn.Charged = rtn.ReportGeneral.Select(x => x.daily_charged).Sum(a => a);
+                rtn.ActiveUsers = rtn.ReportGeneral.Select(x => x.Suscripciones).Sum(a => a);
                 rtn.Registered = rtn.ReportGeneral.Select(x => x.Registrados).Sum(a => a);
                 rtn.Cancellation = 0;
+                var td = rtn.ActiveUsers - rtn.Cancellation;
+                rtn.SubcribedUsers = td;
                 rtn.ValuesPerMonth = new List<ValMonth>();
                 var months = GetMonths();
                 foreach (var month in months)

@@ -14,50 +14,25 @@
     @RenderSection("contents", false)
 </head>
 <body class="fixed-left">
-    <!-- Begin page -->
     <div id="wrapper">
-
-        <!-- Top Bar Start -->
         <div class="topbar">
-
-            <!-- LOGO -->
-            <div class="topbar-left" style="background-color: rgba(147, 147, 147, 0.85)">
-                <a href="@Url.Action("Index","Home")" style="background: rgba(147, 147, 147, 0.85)" class="logo">
-                    <img src="~/images/bophelp.png" class="img-responsive" style="height:3pc; margin-left:pc; margin-top:1.5pc; background: rgba(147, 147, 147, 0.85)" />
+            <div class="topbar-left" >
+                <a href="@Url.Action("Index","Home")"  class="logo">
+                    <img src="~/images/bophelp.png" class="img-responsive" id="ls" />
                 </a>
             </div>
-
-            <!-- Navbar -->
-            <div class="navbar navbar" role="navigation" style="background-color: rgba(130, 130, 130, 0.85)">
+            <div class="navbar navbar" role="navigation">
                 <div class="container">
                     <div class="">
                         <div class="pull-left">
                             <button class="button-menu-mobile open-left waves-effect">
                                 <i class="md md-menu"></i>
                             </button>
-                            <span class="clearfix"></span>
                         </div>
-
-                        <ul class="nav navbar-nav navbar-right pull-right">
-                            <li class="dropdown hidden-xs">
-                                <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light"
-                                   data-toggle="dropdown" aria-expanded="true">
-                                    <span class="badge badge-xs badge-pink"></span>
-                                </a>
-                            </li>
-                            <li class="hidden-xs" id="s1">
-                                <a href="#" class="right-bar-toggle waves-effect waves-light">
-                                    <i class="md md-settings"></i>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
-                    <!--/.nav-collapse -->
                 </div>
             </div>
         </div>
-        <!-- Top Bar End -->
-        <!-- ========== Left Sidebar Start ========== -->
         <div class="left side-menu">
             <div class="sidebar-inner slimscrollleft">
                 <div id="sidebar-menu">
@@ -72,59 +47,24 @@
                 </div>
                 <div class="clearfix"></div>
             </div>
-
         </div>
-        <!-- Left Sidebar End -->
-        <!-- ============================================================== -->
-        <!-- Start right Content here -->
-        <!-- ============================================================== -->
         <div class="content-page">
-            <!-- Start content -->
             <div class="content">
                 <div class="container">
                     @RenderBody()
                 </div>
-                <!-- end container -->
-            </div>
-            <!-- end content -->
-        </div>
-        <!-- ============================================================== -->
-        <!-- End Right content here -->
-        <!-- ============================================================== -->
-        <!-- Right Sidebar -->
-        <div class="side-bar right-bar">
-            <div class="nicescroll">
-                <ul class="nav nav-tabs tabs">
-                    <li class="active tab">
-                        <a href="#home-2" data-toggle="tab" aria-expanded="false">
-                            <span class="visible-xs"><i class="fa fa-home"></i></span>
-                            <span class="hidden-xs">Apps BOP</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade in active" id="home-2">
-                        <div class="time-item">
-                            <div class="item-info" id="s1">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
-        <!-- /Right-bar -->
-        <!-- END wrapper -->
+    </div>
+    <script>
+        var resizefunc = [];
+    </script>
 
-        <script>
+    <!-- Plugins  -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundle/common")
 
-        </script>
-
-        <!-- Plugins  -->
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @Scripts.Render("~/bundle/common")
-
-        @RenderSection("scripts", false)
+    @RenderSection("scripts", false)
 </body>
 </html>
