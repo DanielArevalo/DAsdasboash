@@ -133,6 +133,51 @@ namespace Milton.Controllers
                 Subscription = valid.Select(x => x.Suscripciones).Sum(a => a).ToString()
             };
         }
+
+        private List<GetInfo> info(int CellPhone)
+        {
+            if (CellPhone != 0)
+            {
+                var query = @"	SELECT	a.status_id as StatusId,
+							a.user_email as UserEmail,
+							a.user_icard as UserIcard,
+							a.user_icardtitular as UserIcardtitular,
+							a.user_id as UserId,
+							a.user_lastname as UserLastname,
+							a.user_firstname as UserName,
+							a.user_uc as UserUc,
+							a.user_firstname as Name,
+							a.user_sellerCode as SellerCode,
+							b.lang_short as UserLanguage,
+							b.lang_description as UserLanguageDescription, 
+							a.user_password_changed as PasswordChanged,
+							c.country_id as CountryId,
+							c.country_name as Country,
+							a.user_address as Address,
+							CONVERT(VARCHAR(11),a.user_birthdate,111) as Birthdate,
+							a.user_cellphone as CellPhone,
+							a.user_gender as Gender, 'Group' as 'Group',
+							1 as GroupId,
+							b.lang_id as LanguageId,
+							CONVERT(VARCHAR(11),a.user_last_activity,111) as LastActivity,
+							a.user_urlimg as pictureUrl,
+							g.AppCode as AppId,
+							a.CarNumber as CarNumber,
+							g.name as AppName,
+							(SELECT token FROM token WHERE cellphone=a.user_cellphone)	AS ExternalUserId		
+					FROM users a
+					join languages b on a.user_lang = b.lang_id
+					join country c on a.country_id = c.country_id
+					--join usersXgroup d on a.user_id = d.user_id
+					--join groupXentity e on d.groupenti_id = e.groupenti_id
+					join AppXUser f ON f.IdUser = a.user_id
+					join AppContract g on g.Id = f.IdAppContract
+					WHERE a.user_cellphone = '" + CellPhone + "'";
+
+                return _db.Database.SqlQuery<GetInfo>(query).ToList();
+
+            }
+        }
     }
 }
 

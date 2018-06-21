@@ -9,6 +9,9 @@
     <link href="~/Scripts/plugins/morris/morris.css" rel="stylesheet">
     <link href="~/Scripts/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
     <link href="~/Scripts/plugins/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="~/Scripts/plugins/datatables/fixedHeader.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Scripts/plugins/datatables/buttons.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Scripts/plugins/datatables/responsive.bootstrap.min.css" rel="stylesheet" />
 }
 
 <div class="row">
@@ -162,7 +165,6 @@
     <script src="~/Scripts/jquery.app.js"></script>
 
     <script src="@Url.Content("~/Scripts/plugins/moment/moment.js")"></script>
-    <link href="~/Scripts/plugins/datatables/fixedHeader.bootstrap.min.css" rel="stylesheet" />
     <script src="~/Scripts/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
     <script src="~/Scripts/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
     <script src="~/Scripts/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
@@ -184,12 +186,6 @@
     <script src="@Url.Content("~/Scripts/plugins/datatables/dataTables.scroller.min.js")"></script>
     <script src="@Url.Content("~/Scripts/plugins/chartist/dist/chartist.min.js")"></script>
 
-
-
-
-
-
-
     <script type="text/javascript">
         $(document).ready(
             function ($) {
@@ -207,6 +203,8 @@
                 GetInfo();
 
             });
+
+
 
         function GetInfo() {
             const df = new Date($('.fromDate').val());
@@ -228,7 +226,7 @@
                     if (data.ReportGeneral.length > 0) {
                         var tbOne = $("#financialReport");
                         var columns = [
-                            { data: 'Date', className: "left" },
+                            { data: 'Date', className: "center" },
                             { data: 'Suscripciones', className: "center" },
                             { data: 'Cancelados', className: "center" },
                             { data: 'Suscripciones', className: "center" },
@@ -263,6 +261,7 @@
                             .datum(ConvertToData(data.CompaniesMetrics))
                             .transition().duration(1200)
                             .call(chart);
+
 
                         return chart;
                     });
