@@ -30,7 +30,7 @@ namespace Milton
                       "~/content/pages.css",
                       "~/content/menu.css",
                       "~/content/responsive.css",
-                      "~/plugins/switchery/switchery.min.css"));
+                      "~/Scripts/plugins/switchery/switchery.min.css"));
 
             bundles.Add(new ScriptBundle("~/bundle/common").Include(
                     "~/Scripts/detect.js",
@@ -40,7 +40,7 @@ namespace Milton
                     "~/Scripts/wow.min.js",
                     "~/Scripts/jquery.nicescroll.js",
                     "~/Scripts/jquery.scrollTo.min.js",
-                    "~/plugins/switchery/switchery.min.js",
+                    "~/Scripts/plugins/switchery/switchery.min.js",
                     "~/Scripts/jquery.slimscroll.js"));
 
             bundles.Add(new ScriptBundle("~/bundle/core-app").Include(
