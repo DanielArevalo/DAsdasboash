@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>D:\LotusOdonto\Bop\Publishings\Dasboard0512</_PublishTargetUrl>
+    <_PublishTargetUrl>D:\LotusOdonto\Bop\Publishings\Dasboard0626.02</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
@@ -154,7 +154,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/11/2018 11:31:16</publishTime>
     </File>
     <File Include="bin/Milton.dll">
-      <publishTime>05/12/2018 12:57:22</publishTime>
+      <publishTime>06/26/2018 16:25:57</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>05/11/2018 11:31:16</publishTime>
@@ -11236,7 +11236,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/11/2018 11:31:12</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>05/12/2018 12:19:47</publishTime>
+      <publishTime>05/14/2018 10:27:04</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>05/11/2018 11:31:12</publishTime>

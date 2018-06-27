@@ -52,6 +52,14 @@ namespace Milton.Controllers
             {
                 case "ricardo.ariza@bophelp.com":
                     return password.Equals("Bop123*");
+                case "fabiola.franco@bophelp.com":
+                    return password.Equals("Bop123*");
+                case "sary.assef@bophelp.com":
+                    return password.Equals("Bop123*");
+                case "salvador.dacunha@bophelp.com":
+                    return password.Equals("Bop123*");
+                case "miller.ruiz@thomsongl.com":
+                    return password.Equals("mRuizThomson123*");
                 default:
                     return false;
             }
